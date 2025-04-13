@@ -47,11 +47,17 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a Junior software developer with experience in Python and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Django. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I'm a Senior Full Stack Developer with a strong backend focus, I
+        specialize in architecting scalable web applications, excelling in
+        Spring Boot for high-performance backend systems. I design
+        microservices, optimize PostgreSQL databases, and integrate seamlessly
+        with frontend technologies like React.js. With expertise in
+        DevOps, I leverage Kubernetes and Docker for scalable deployments,
+        ensuring resilience in production. 
+        
+        Passionate about solving complex
+        backend challenges, I thrive in cross-functional teams, delivering
+        innovative and high-performing digital solutions.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

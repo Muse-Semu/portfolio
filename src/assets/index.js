@@ -39,6 +39,18 @@ import st2 from "./st2.png";
 import linkedin from "./linkedin.png";
 import live from "./test.png";
 import anku from "./anku.png";
+import springboot from "./springboot.png";
+import redis from "./redis.png";
+import kafka from "./kafka.png";
+import kubernetes from "./kubernetes.png";
+import debezium from "./debezium.png";
+import apachecamel from "./apachecamel.svg";
+import apache from "./apache.svg"; 
+import atlas from "./atlas.png";
+import activemq from "./activemq.png";
+import postman from "./postman.png";
+import gitlab from "./gitlab.png";
+import junit from "./junit.png";
 export {
   logo,
   backend,
@@ -79,4 +91,16 @@ export {
   linkedin,
   live,
   anku,
+  springboot,
+  redis,
+  kafka,
+  kubernetes,
+  debezium,
+  apache,
+  apachecamel,
+  atlas,
+  activemq,
+  postman,
+  gitlab,
+  junit,
 };

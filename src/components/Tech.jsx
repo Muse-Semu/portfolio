@@ -34,7 +34,8 @@ const Tech = () => {
             <div className="flex flex-row flex-wrap justify-center gap-10 mt-5 mb-20">
               {category.items.map((item) => (
                 <div className="w-28 h-28 " key={item.name}>
-                  <BallCanvas icon={item.icon} />
+                  {/* < icon={item.icon} /> */}
+                  <img src={item.icon} alt="" />
                   <h1 className=" text-center">{item.name}</h1>
                 </div>
               ))}

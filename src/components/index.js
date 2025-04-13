@@ -12,13 +12,13 @@ export {
   Hero,
   Navbar,
   About,
-  Tech,
   Experience,
   Works,
+  Tech,
   Feedbacks,
   Contact,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
-  StarsCanvas
-}
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
+  StarsCanvas,
+};
