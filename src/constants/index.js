@@ -44,6 +44,16 @@ import {
   postman,
   gitlab,
   junit,
+  core1,
+  core2,
+  core3,
+  core4,
+  mobilebanking1,
+  mobilebanking4,
+  mobilebanking3,
+  mobilebanking2,
+  backoffice,
+  core5,
 } from "../assets";
 
 export const navLinks = [
@@ -219,12 +229,10 @@ const projects = [
           { name: "consul", color: "green-text-gradient" },
           { name: "keycloak", color: "pink-text-gradient" },
         ],
-        image:
-          "https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=800&q=60",
+        image: core5
+          ,
         images: [
-          "https://images.unsplash.com/photo-1581091870627-3a4b407be6d4?auto=format&fit=crop&w=800&q=60",
-          "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=60",
-          "https://images.unsplash.com/photo-1631610321164-05ddfe1cd8b4?auto=format&fit=crop&w=800&q=60",
+          core2,core3,core4
         ],
         source_code_link: "",
       },
@@ -236,12 +244,11 @@ const projects = [
           { name: "springboot", color: "blue-text-gradient" },
           { name: "java", color: "green-text-gradient" },
         ],
-        image:
-          "https://img.freepik.com/free-vector/mobile-banking-isometric_98292-7039.jpg",
+        image: mobilebanking1,
         images: [
-          "https://www.analyticsinsight.net/wp-content/uploads/2022/11/Mobile-Banking-Apps.jpg",
-          "https://cdn.dribbble.com/users/1473869/screenshots/15774991/media/e512a02717c214e3c0f873c364b4bcb0.jpg",
-          "https://www.bbva.com/wp-content/uploads/2021/08/BBVA-app-banca-movil-1280x725.jpg",
+          mobilebanking2,
+          mobilebanking3,
+          mobilebanking4
         ],
         source_code_link: "",
       },
@@ -254,12 +261,11 @@ const projects = [
           { name: "springboot", color: "green-text-gradient" },
           { name: "redux", color: "pink-text-gradient" },
         ],
-        image:
-          "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=800&q=60",
+        image: backoffice,
         images: [
-          "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60",
-          "https://images.unsplash.com/photo-1601041253986-4d5e20aa8ad4?auto=format&fit=crop&w=800&q=60",
-          "https://images.unsplash.com/photo-1591696331117-fb9c195ea3b3?auto=format&fit=crop&w=800&q=60",
+          mobilebanking2,
+          mobilebanking3,
+          mobilebanking4
         ],
         source_code_link: "",
       },

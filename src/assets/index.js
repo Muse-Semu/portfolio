@@ -51,6 +51,16 @@ import activemq from "./activemq.png";
 import postman from "./postman.png";
 import gitlab from "./gitlab.png";
 import junit from "./junit.png";
+import core1 from "./core1.png";
+import core2 from "./core2.png";
+import core3 from "./core3.png";
+import core4 from "./core4.png";
+import core5 from "./core5.png";
+import mobilebanking1 from "./mobilebanking1.png";
+import mobilebanking2 from "./mobilebanking2.png";
+import mobilebanking3 from "./mobilebanking3.png";
+import mobilebanking4 from "./mobilebanking4.png";
+import backoffice from "./backoffice.png";
 export {
   logo,
   backend,
@@ -103,4 +113,16 @@ export {
   postman,
   gitlab,
   junit,
+  core1,
+  core2,
+  core3,
+  core4,
+  core5,
+  mobilebanking1,
+  mobilebanking2,
+  mobilebanking3,
+  mobilebanking4,
+  backoffice,
+
+
 };

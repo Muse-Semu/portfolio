@@ -92,7 +92,7 @@ const Achievment = () => {
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Achievment.
+          Key Achievments.
         </h2>
       </motion.div>
 
