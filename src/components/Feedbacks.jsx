@@ -15,43 +15,60 @@ const FeedbackCard = ({
   company,
   image,
   onEdit,
-}) => (
-  <motion.div
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
-  >
-    <p className="text-white font-black text-[48px]">"</p>
-    <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
-          </p>
-          <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
-          </p>
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Truncate text to a set number of words
+  const truncateText = (text, wordLimit = 10) => {
+    const words = text.split(" ");
+    if (words.length <= wordLimit) return text;
+    return words.slice(0, wordLimit).join(" ") + "...";
+  };
+
+  return (
+    <motion.div
+      className="bg-black-200 p-10 border rounded-3xl min-h-[400px] flex flex-col"
+    >
+      <p className="text-white font-black text-[48px]">"</p>
+      <div className="mt-1 flex-1 flex flex-col">
+        <div>
+          <span className="text-white tracking-wider text-[18px]">
+            {isExpanded ? testimonial : truncateText(testimonial)}
+          </span>
+          {testimonial.split(" ").length > 10 && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-white hover:underline text-[14px] ml-2"
+            >
+              {isExpanded ? "Read Less" : "Read More"}
+            </button>
+          )}
         </div>
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="w-10 h-10 rounded-full object-cover"
-        />
+        <div className="mt-7 flex justify-between items-center gap-1">
+          <div className="flex-1 flex flex-col">
+            <p className="text-white font-medium text-[16px]">
+              <span className="blue-text-gradient">@</span> {name}
+            </p>
+            <p className="mt-1 text-secondary text-[12px]">
+              {designation} of {company}
+            </p>
+          </div>
+          <img
+            src={image}
+            alt={`feedback_by-${name}`}
+            className="w-10 h-10 rounded-full object-cover"
+          />
+        </div>
       </div>
-      {/* <button
-        onClick={() =>
-          onEdit({ testimonial, name, designation, company, image })
-        }
-        className="mt-4 bg-blue-500 py-1 px-3 rounded-lg text-white hover:bg-blue-600"
-      >
-        Edit
-      </button> */}
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const Feedbacks = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingTestimonial, setEditingTestimonial] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(4);
+  const BATCH_SIZE = 4;
   const {
     testimonials,
     isLoading,
@@ -99,6 +116,14 @@ const Feedbacks = () => {
     setIsModalOpen(true);
   };
 
+  const handleSeeMore = () => {
+    setVisibleCount((prev) => prev + BATCH_SIZE);
+  };
+
+  const handleShowLess = () => {
+    setVisibleCount(BATCH_SIZE);
+  };
+
   return (
     <div className="mt-12 bg-black-100 rounded-[20px] relative">
       <div
@@ -141,22 +166,45 @@ const Feedbacks = () => {
         onUpdateTestimonial={updateTestimonial}
         editingTestimonial={editingTestimonial}
       />
-      <div className={`pb-14 ${styles.paddingX} flex flex-wrap gap-7 mt-12`}>
+      <div
+        className={`pb-14 ${styles.paddingX} grid lg:grid-cols-2 gap-7 mt-12`}
+      >
         {testimonials && testimonials.length > 0
-          ? testimonials.map((testimonial, index) => (
-              <FeedbackCard
-                key={testimonial.name + index}
-                index={index}
-                {...testimonial}
-                onEdit={(data) => openModal({ ...data, id: testimonial.id })}
-              />
-            ))
+          ? testimonials
+              .slice(0, visibleCount)
+              .map((testimonial, index) => (
+                <FeedbackCard
+                  key={testimonial.name + index}
+                  index={index}
+                  {...testimonial}
+                  onEdit={(data) => openModal({ ...data, id: testimonial.id })}
+                />
+              ))
           : !isLoading && (
               <p className="text-white text-center w-full">
                 No testimonials available.
               </p>
             )}
       </div>
+      {testimonials && testimonials.length > 4 && (
+        <div className="flex justify-center mt-4">
+          {visibleCount < testimonials.length ? (
+            <button
+              onClick={handleSeeMore}
+              className="bg-tertiary mb-5 py-2 px-6 rounded-lg text-white hover:bg-tertiary/80"
+            >
+              See More ...
+            </button>
+          ) : (
+            <button
+              onClick={handleShowLess}
+              className="bg-tertiary py-2 px-6 rounded-lg text-white hover:bg-tertiary/80"
+            >
+              Show Less
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };
