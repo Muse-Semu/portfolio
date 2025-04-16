@@ -115,7 +115,6 @@ const technologies = [
     name: "Java",
     icon: java,
   },
-
   {
     name: "React JS",
     icon: reactjs,
@@ -148,15 +147,10 @@ const technologies = [
     name: "MySQL",
     icon: mysql,
   },
-  // {
-  //   name: "Three JS",
-  //   icon: threejs,
-  // },
   {
     name: "git",
     icon: git,
   },
-
   {
     name: "docker",
     icon: docker,
@@ -168,7 +162,7 @@ const technologies = [
   {
     name: "Gitlab",
     icon: gitlab,
-  }
+  },
 ];
 
 const experiences = [
@@ -210,7 +204,7 @@ const experiences = [
 ];
 
 const testimonials = [
-  
+ 
 ];
 
 const projects = [
@@ -229,11 +223,8 @@ const projects = [
           { name: "consul", color: "green-text-gradient" },
           { name: "keycloak", color: "pink-text-gradient" },
         ],
-        image: core5
-          ,
-        images: [
-          core2,core3,core4
-        ],
+        image: core5,
+        images: [core2, core3, core4],
         source_code_link: "",
       },
       {
@@ -245,11 +236,7 @@ const projects = [
           { name: "java", color: "green-text-gradient" },
         ],
         image: mobilebanking1,
-        images: [
-          mobilebanking2,
-          mobilebanking3,
-          mobilebanking4
-        ],
+        images: [mobilebanking2, mobilebanking3, mobilebanking4],
         source_code_link: "",
       },
       {
@@ -262,11 +249,7 @@ const projects = [
           { name: "redux", color: "pink-text-gradient" },
         ],
         image: backoffice,
-        images: [
-          mobilebanking2,
-          mobilebanking3,
-          mobilebanking4
-        ],
+        images: [mobilebanking2, mobilebanking3, mobilebanking4],
         source_code_link: "",
       },
     ],
@@ -286,7 +269,7 @@ const projects = [
           { name: "eureka", color: "green-text-gradient" },
         ],
         image: carrent,
-        images: [carrent, tripguide, shopify], // Multiple images for modal
+        images: [carrent, tripguide, shopify],
         source_code_link: "",
       },
       {
@@ -300,7 +283,7 @@ const projects = [
           { name: "tailwind", color: "blue-text-gradient" },
         ],
         image: food,
-        images: [food, creator, tesla], // Multiple images for modal
+        images: [food, creator, tesla],
         source_code_link:
           "https://github.com/Muse-Semu/django-react-final_project",
       },
@@ -314,7 +297,7 @@ const projects = [
           { name: "MySQL", color: "pink-text-gradient" },
         ],
         image: st2,
-        images: [st2, mobile, jobit], // Multiple images for modal
+        images: [st2, mobile, jobit],
         source_code_link:
           "https://github.com/Muse-Semu/javafx_student_record_system/tree/javafx/",
       },
@@ -323,25 +306,6 @@ const projects = [
 ];
 
 const tech = [
-  {
-    title: "Programming & Web Development",
-    items: [
-      { name: "Java", icon: java },
-      { name: "JavaScript", icon: javascript },
-      { name: "TypeScript", icon: typescript },
-      { name: "Python", icon: python },
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
-    ],
-  },
-  {
-    title: "Frontend Development",
-    items: [
-      { name: "React JS", icon: reactjs },
-      { name: "Redux Toolkit", icon: redux },
-      { name: "Tailwind CSS", icon: tailwind },
-    ],
-  },
   {
     title: "Backend & Integration",
     items: [
@@ -355,6 +319,16 @@ const tech = [
       { name: "Debezium", icon: debezium },
     ],
   },
+
+  {
+    title: "Frontend Development",
+    items: [
+      { name: "React JS", icon: reactjs },
+      { name: "Redux Toolkit", icon: redux },
+      { name: "Tailwind CSS", icon: tailwind },
+    ],
+  },
+
   {
     title: "Database & Caching",
     items: [
@@ -362,6 +336,17 @@ const tech = [
       { name: "MySQL", icon: mysql },
       { name: "MongoDB", icon: mongodb },
       { name: "Redis", icon: redis },
+    ],
+  },
+  {
+    title: "Programming & Web Development",
+    items: [
+      { name: "Java", icon: java },
+      { name: "JavaScript", icon: javascript },
+      { name: "TypeScript", icon: typescript },
+      { name: "Python", icon: python },
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
     ],
   },
   {
@@ -380,7 +365,6 @@ const tech = [
       { name: "Git", icon: git },
       { name: "GitHub", icon: github },
       { name: "GitLab", icon: gitlab },
-      
     ],
   },
 ];

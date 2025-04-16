@@ -5,9 +5,17 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  );
+  const [sphere] = useState(() => {
+    const points = random.inSphere(new Float32Array(5000 * 3), { radius: 1.2 });
+    // Validate and replace NaN or invalid values
+    for (let i = 0; i < points.length; i++) {
+      if (!isFinite(points[i])) {
+        console.warn(`Invalid position value at index ${i}: ${points[i]}`);
+        points[i] = 0;
+      }
+    }
+    return points;
+  });
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -36,7 +44,6 @@ const StarsCanvas = () => {
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
-
         <Preload all />
       </Canvas>
     </div>

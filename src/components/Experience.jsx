@@ -61,7 +61,6 @@ const ExperienceCard = ({ experience }) => {
                 src={live}
                 alt=""
                 className="h-10 w-10 rounded-full"
-                srcset=""
               />
               <span className="text-center">
                 

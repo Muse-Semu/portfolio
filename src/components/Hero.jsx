@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 import { github, linkedin, muse } from "../assets";
 import { Tilt } from "react-tilt";
 import { fadeIn } from "../utils/motion";

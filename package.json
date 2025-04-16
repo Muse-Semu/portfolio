@@ -16,6 +16,7 @@
     "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.90.0",
     "@react-three/fiber": "^8.15.12",
+    "@supabase/supabase-js": "^2.49.4",
     "framer-motion": "^10.16.15",
     "maath": "^0.10.4",
     "react": "^18.2.0",
@@ -23,7 +24,8 @@
     "react-router-dom": "^6.20.1",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "three": "^0.159.0"
+    "three": "^0.159.0",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

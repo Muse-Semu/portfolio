@@ -67,7 +67,7 @@ const AchievmentCard = ({ achievement }) => {
                 src={live}
                 alt=""
                 className="h-10 w-10 rounded-full"
-                srcset=""
+                srcSet=""
               />
               <span className="text-center">Live</span>
             </a>
