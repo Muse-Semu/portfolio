@@ -54,6 +54,10 @@ import {
   mobilebanking2,
   backoffice,
   core5,
+  bargraph,
+  api,
+  microservice,
+  coding,
 } from "../assets";
 
 export const navLinks = [
@@ -74,24 +78,41 @@ export const navLinks = [
 const services = [
   {
     title: "Fullstack Web Development",
-    icon: web,
+    icon: coding,
   },
   {
     title: "Microservices Architecture Design",
-    icon: backend,
+    icon: microservice,
   },
   {
     title: "Real-Time Data Integration & CDC",
-    icon: mobile,
+    icon: debezium
   },
-  {
-    title: "Responsive Frontend Engineering",
-    icon: reactjs,
-  },
+ 
   {
     title: "Data analysis and visualization",
-    icon: web,
+    icon: bargraph,
   },
+  
+  {
+    title: "API Development and Integration",
+    icon: api,
+  },
+  {
+    title: "DevOps",
+    icon: docker,
+  },
+  {
+    title: "Version Control and Collaboration",
+    icon: gitlab,
+  },
+  {
+    title: "Testing and Quality Assurance",
+    icon: junit,
+  },
+  
+  
+  
 ];
 
 const technologies = [
@@ -175,14 +196,20 @@ const experiences = [
     link: "https://www.act.com.et/",
     code: "",
     points: [
-      "Built and maintained scalable backend systems using Spring Boot and microservices architecture.",
-      "Implemented caching mechanisms with Redis to optimize performance and reduce database load.",
-      "Integrated Kafka and ActiveMQ for reliable message-driven communication and event processing.",
-      "Utilized Spring Cloud with Consul for service discovery and configuration management in distributed systems.",
-      "Secured sensitive data using Vault for secrets management and secure storage.",
-      "Designed and managed PostgreSQL databases to store and process business rules efficiently.",
-      "Collaborated with cross-functional teams to ensure seamless integration of backend services with frontend components.",
-      "Implemented dynamic and responsive designs using React to enhance user experience.",
+      "Designed and developed scalable backend systems using Spring Boot and microservices architecture, ensuring high availability and performance.",
+      "Implemented PostgreSQL stored procedures to encapsulate complex business logic and rules, enhancing data processing efficiency and maintainability.",
+      "Optimized system performance by integrating Redis caching mechanisms, significantly reducing database load and improving response times.",
+      "Configured Apache Kafka and ActiveMQ for reliable, event-driven communication, enabling seamless message processing across distributed systems.",
+      "Utilized Spring Cloud with Consul for service discovery and centralized configuration management, enhancing scalability and fault tolerance.",
+      "Secured sensitive data and credentials using HashiCorp Vault for robust secrets management and secure storage.",
+      "Designed and optimized PostgreSQL databases to efficiently store, manage, and process business rules and transactional data.",
+      "Implemented Cron jobs for scheduling automated tasks, streamlining recurring processes and improving operational efficiency.",
+      "Developed and enforced limit rules for mobile and USSD banking platforms using Spring Boot and PostgreSQL, ensuring compliance with regulatory and business requirements.",
+      "Integrated SMS and email interfaces for a notification service, enabling timely and reliable communication with users.",
+      "Built interactive reporting dashboards using Metabase and Apache Superset, enabling stakeholders to visualize and analyze key business metrics effectively.",
+      "Integrated reporting tools with backend systems to provide real-time insights, supporting data-driven decision-making.",
+      "Collaborated with cross-functional teams to integrate backend services with React-based frontend components, ensuring seamless functionality and user experience.",
+      "Implemented dynamic and responsive UI designs using React, enhancing user engagement and accessibility across devices.",
     ],
   },
   {
@@ -245,8 +272,15 @@ const projects = [
           "Built a backoffice system with interactive React UI components for customer interactions and message template management. Implemented dynamic, responsive designs to enhance user experience. Integrated the frontend with Spring Boot microservices for seamless data flow, ensuring maintainability and scalability with modular React components.",
         tags: [
           { name: "react", color: "blue-text-gradient" },
-          { name: "springboot", color: "green-text-gradient" },
+          {
+            name: "springboot",
+            color:
+              "grehttps://github.com/Muse-Semu/e-commerce-microserviceen-text-gradient",
+          },
+          { name: "java", color: "green-text-gradient" },
           { name: "redux", color: "pink-text-gradient" },
+          { name: "tailwind", color: "blue-text-gradient" },
+          { name: "shadcn", color: "green-text-gradient" },
         ],
         image: backoffice,
         images: [mobilebanking2, mobilebanking3, mobilebanking4],
@@ -270,7 +304,8 @@ const projects = [
         ],
         image: carrent,
         images: [carrent, tripguide, shopify],
-        source_code_link: "",
+        source_code_link:
+          "https://github.com/Muse-Semu/e-commerce-microservice",
       },
       {
         name: "Food Delivery",
@@ -278,7 +313,11 @@ const projects = [
           "Built with React, Django, Tailwind CSS, Redux, and PostgreSQL, offers a user-friendly experience with key features for seamless food ordering. Users can easily register, log in, and explore a dynamic menu with various categories. The platform supports secure online transactions and enables users to track the real-time status of their orders. Additionally, the system includes personalized user profiles for managing information and viewing order history. For administrators, an intuitive backend dashboard facilitates order management and menu updates.",
         tags: [
           { name: "react", color: "blue-text-gradient" },
-          { name: "postgre", color: "green-text-gradient" },
+          { name: "django", color: "green-text-gradient" },
+          { name: "tailwind", color: "pink-text-gradient" },
+          { name: "javascript", color: "blue-text-gradient" },
+          { name: "python", color: "green-text-gradient" },
+          { name: "postgreS", color: "green-text-gradient" },
           { name: "redux", color: "pink-text-gradient" },
           { name: "tailwind", color: "blue-text-gradient" },
         ],
@@ -416,6 +455,22 @@ const achievements = [
       "Resolved race conditions in concurrent transactions through proper locking mechanisms, ensuring data integrity.",
       "Integrated database procedures with Spring Boot applications, enabling seamless rule evaluation across application and database layers.",
       "Designed reusable and maintainable rule logic to support evolving business requirements, minimizing code duplication and technical debt.",
+    ],
+  },
+
+  {
+    title: "Notification Service Implementation",
+    company_name: "Atlas Computer Technology",
+    icon: activemq,
+    iconBg: "#E6DEDD",
+    date: "2025",
+    link: "https://www.act.com.et/",
+    code: "",
+    points: [
+      "Designed and implemented a reliable notification service using Artemis ActiveMQ queues to manage and process message delivery.",
+      "Integrated SMS and email interfaces with client APIs, enabling timely and consistent user notifications for critical updates.",
+      "Developed error-handling mechanisms to maintain service reliability during network or API disruptions, minimizing notification failures.",
+      "Collaborated with stakeholders to customize notification workflows, improving user engagement and operational efficiency.",
     ],
   },
 ];
