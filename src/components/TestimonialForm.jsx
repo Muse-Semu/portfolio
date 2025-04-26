@@ -15,6 +15,7 @@ const TestimonialForm = ({
     designation: editingTestimonial?.designation || "",
     company: editingTestimonial?.company || "",
     image: editingTestimonial?.image || "",
+    linkedin: editingTestimonial?.linkedin || "",
   });
   const [imagePreview, setImagePreview] = useState(
     editingTestimonial?.image || ""
@@ -24,6 +25,7 @@ const TestimonialForm = ({
     name: "",
     designation: "",
     company: "",
+    linkedin: "",
   });
   const [modal, setModal] = useState({
     isOpen: false,
@@ -57,6 +59,7 @@ const TestimonialForm = ({
       name: "",
       designation: "",
       company: "",
+      linkedin: "",
     };
 
     if (!formData.testimonial.trim()) {
@@ -73,6 +76,17 @@ const TestimonialForm = ({
     }
     if (!formData.company.trim()) {
       newErrors.company = "Company is required.";
+      isValid = false;
+    }
+    if (!formData.linkedin.trim()) {
+      newErrors.linkedin = "LinkedIn URL is required.";
+      isValid = false;
+    }
+    if (
+      formData.linkedin &&
+      !/^https?:\/\/(www\.)?linkedin\.com\/.*$/.test(formData.linkedin)
+    ) {
+      newErrors.linkedin = "Please enter a valid LinkedIn URL.";
       isValid = false;
     }
 
@@ -107,6 +121,7 @@ const TestimonialForm = ({
         designation: "",
         company: "",
         image: "",
+        linkedin: "",
       });
       setImagePreview("");
       setTimeout(() => {
@@ -130,6 +145,7 @@ const TestimonialForm = ({
       designation: "",
       company: "",
       image: "",
+      linkedin: "",
     });
     setImagePreview("");
     setErrors({
@@ -137,6 +153,7 @@ const TestimonialForm = ({
       name: "",
       designation: "",
       company: "",
+      linkedin: "",
     });
     onClose();
   };
@@ -220,6 +237,19 @@ const TestimonialForm = ({
               )}
             </div>
             <div>
+              <input
+                type="text"
+                name="linkedin"
+                value={formData.linkedin}
+                onChange={handleChange}
+                placeholder="LinkedIn URL "
+                className="p-2 rounded-lg bg-tertiary text-white w-full"
+              />
+              {errors.linkedin && (
+                <p className="text-red-500 text-sm mt-1">{errors.linkedin}</p>
+              )}
+            </div>
+            <div>
               <label htmlFor="input">Photo</label>
               <input
                 type="file"
@@ -240,7 +270,7 @@ const TestimonialForm = ({
               <button
                 type="button"
                 onClick={handleCancel}
-                className= " w-60 bg-tertiary/90 py-2 px-4 rounded-lg text-white hover:bg-tertiary"
+                className=" w-60 bg-tertiary/90 py-2 px-4 rounded-lg text-white hover:bg-tertiary"
               >
                 Cancel
               </button>
