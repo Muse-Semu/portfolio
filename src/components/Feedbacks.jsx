@@ -14,6 +14,7 @@ const FeedbackCard = ({
   designation,
   company,
   image,
+  linkedin_url,
   onEdit,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -50,6 +51,16 @@ const FeedbackCard = ({
             <p className="mt-1 text-secondary text-[12px]">
               {designation} of {company}
             </p>
+            {linkedin_url && (
+              <a
+                href={linkedin_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 text-blue-500 font-bold   hover:underline"
+              >
+                LinkedIn Profile
+              </a>
+            )}
           </div>
           <img
             src={image}
@@ -134,7 +145,7 @@ const Feedbacks = () => {
       </div>
       <button
         onClick={() => openModal()}
-        className="fixed bottom-8 right-8 bg-tertiary py-3 px-4 rounded-3xl text-white hover:bg-tertiary/80 flex items-center gap-2 z-50 shadow-lg"
+        className="fixed bottom-8 right-8 bg-tertiary py-3 px-4 rounded-3xl text-white hover:bg-tertiary/80 flex items-center gap-2 z-[9999] shadow-lg"
         title="Add Testimonial"
       >
         <svg
