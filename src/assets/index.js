@@ -61,6 +61,10 @@ import mobilebanking2 from "./mobilebanking2.png";
 import mobilebanking3 from "./mobilebanking3.png";
 import mobilebanking4 from "./mobilebanking4.png";
 import backoffice from "./backoffice.png";
+import bargraph from "./bargraph.png";
+import api from "./api.png";
+import microservice from "./microservice.png";
+import coding from "./coding.png";
 export {
   logo,
   backend,
@@ -123,6 +127,9 @@ export {
   mobilebanking3,
   mobilebanking4,
   backoffice,
-
+  bargraph,
+  api,
+  microservice,
+  coding,
 
 };
