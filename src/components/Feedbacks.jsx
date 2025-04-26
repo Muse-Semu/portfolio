@@ -26,9 +26,7 @@ const FeedbackCard = ({
   };
 
   return (
-    <motion.div
-      className="bg-black-200 p-10 border rounded-3xl min-h-[400px] flex flex-col"
-    >
+    <motion.div className="bg-black-200 p-10 border rounded-3xl min-h-[400px] flex flex-col">
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1 flex-1 flex flex-col">
         <div>
