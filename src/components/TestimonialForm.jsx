@@ -15,7 +15,7 @@ const TestimonialForm = ({
     designation: editingTestimonial?.designation || "",
     company: editingTestimonial?.company || "",
     image: editingTestimonial?.image || "",
-    linkedin: editingTestimonial?.linkedin || "",
+    linkedin_url: editingTestimonial?.linkedin_url || "",
   });
   const [imagePreview, setImagePreview] = useState(
     editingTestimonial?.image || ""
@@ -25,7 +25,7 @@ const TestimonialForm = ({
     name: "",
     designation: "",
     company: "",
-    linkedin: "",
+    linkedin_url: "",
   });
   const [modal, setModal] = useState({
     isOpen: false,
@@ -59,7 +59,7 @@ const TestimonialForm = ({
       name: "",
       designation: "",
       company: "",
-      linkedin: "",
+      linkedin_url: "",
     };
 
     if (!formData.testimonial.trim()) {
@@ -78,15 +78,15 @@ const TestimonialForm = ({
       newErrors.company = "Company is required.";
       isValid = false;
     }
-    if (!formData.linkedin.trim()) {
-      newErrors.linkedin = "LinkedIn URL is required.";
+    if (!formData.linkedin_url.trim()) {
+      newErrors.linkedin_url = "LinkedIn URL is required.";
       isValid = false;
     }
     if (
-      formData.linkedin &&
-      !/^https?:\/\/(www\.)?linkedin\.com\/.*$/.test(formData.linkedin)
+      formData.linkedin_url &&
+      !/^https?:\/\/(www\.)?linkedin\.com\/.*$/.test(formData.linkedin_url)
     ) {
-      newErrors.linkedin = "Please enter a valid LinkedIn URL.";
+      newErrors.linkedin_url = "Please enter a valid LinkedIn_url URL.";
       isValid = false;
     }
 
@@ -121,7 +121,7 @@ const TestimonialForm = ({
         designation: "",
         company: "",
         image: "",
-        linkedin: "",
+        linkedin_url: "",
       });
       setImagePreview("");
       setTimeout(() => {
@@ -145,7 +145,7 @@ const TestimonialForm = ({
       designation: "",
       company: "",
       image: "",
-      linkedin: "",
+      linkedin_url: "",
     });
     setImagePreview("");
     setErrors({
@@ -153,7 +153,7 @@ const TestimonialForm = ({
       name: "",
       designation: "",
       company: "",
-      linkedin: "",
+      linkedin_url: "",
     });
     onClose();
   };
@@ -212,7 +212,7 @@ const TestimonialForm = ({
                 name="designation"
                 value={formData.designation}
                 onChange={handleChange}
-                placeholder="Designation"
+                placeholder="Designation (your job title or position)"
                 className="p-2 rounded-lg bg-tertiary text-white w-full"
                 required
               />
@@ -239,14 +239,16 @@ const TestimonialForm = ({
             <div>
               <input
                 type="text"
-                name="linkedin"
-                value={formData.linkedin}
+                name="linkedin_url"
+                value={formData.linkedin_url}
                 onChange={handleChange}
                 placeholder="LinkedIn URL "
                 className="p-2 rounded-lg bg-tertiary text-white w-full"
               />
-              {errors.linkedin && (
-                <p className="text-red-500 text-sm mt-1">{errors.linkedin}</p>
+              {errors.linkedin_url && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.linkedin_url}
+                </p>
               )}
             </div>
             <div>
