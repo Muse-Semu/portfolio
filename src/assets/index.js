@@ -65,6 +65,7 @@ import bargraph from "./bargraph.png";
 import api from "./api.png";
 import microservice from "./microservice.png";
 import coding from "./coding.png";
+import OpenTelemetry from './OpenTelemetry.png';
 export {
   logo,
   backend,
@@ -131,5 +132,6 @@ export {
   api,
   microservice,
   coding,
+  OpenTelemetry
 
 };

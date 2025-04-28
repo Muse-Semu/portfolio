@@ -58,6 +58,7 @@ import {
   api,
   microservice,
   coding,
+  OpenTelemetry,
 } from "../assets";
 
 export const navLinks = [
@@ -86,14 +87,14 @@ const services = [
   },
   {
     title: "Real-Time Data Integration & CDC",
-    icon: debezium
+    icon: debezium,
   },
- 
+
   {
     title: "Data analysis and visualization",
     icon: bargraph,
   },
-  
+
   {
     title: "API Development and Integration",
     icon: api,
@@ -110,9 +111,6 @@ const services = [
     title: "Testing and Quality Assurance",
     icon: junit,
   },
-  
-  
-  
 ];
 
 const technologies = [
@@ -230,9 +228,7 @@ const experiences = [
   },
 ];
 
-const testimonials = [
- 
-];
+const testimonials = [];
 
 const projects = [
   {
@@ -356,6 +352,7 @@ const tech = [
       { name: "Apache Camel", icon: apachecamel },
       { name: "Kafka Connect", icon: kafka },
       { name: "Debezium", icon: debezium },
+      { name: "OpenTelemetry", icon: OpenTelemetry },
     ],
   },
 
