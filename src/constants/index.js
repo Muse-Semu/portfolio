@@ -86,6 +86,10 @@ export const navLinks = [
     id: "feedbacks",
     title: "Testimonials",
   },
+  {
+    id: "tech",
+    title: "Technologies & Tools",
+  },
 
 ];
 
