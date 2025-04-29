@@ -66,9 +66,10 @@ export const navLinks = [
     id: "about",
     title: "About",
   },
+
   {
-    id: "contact",
-    title: "Contact",
+    id: "experience",
+    title: "Experience",
   },
   {
     id: "projects",
@@ -78,19 +79,20 @@ export const navLinks = [
     id: "achievements",
     title: "Achievements",
   },
+
   {
-    id: "experience",
-    title: "Experience",
+    id: "tech",
+    title: "Technologies & Tools",
   },
   {
     id: "feedbacks",
     title: "Testimonials",
   },
-  {
-    id: "tech",
-    title: "Technologies & Tools",
-  },
 
+  {
+    id: "contact",
+    title: "Contact",
+  },
 ];
 
 const services = [
