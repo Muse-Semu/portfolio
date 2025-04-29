@@ -110,4 +110,4 @@ const Achievment = () => {
   );
 };
 
-export default SectionWrapper(Achievment, "KeyAchievment");
+export default SectionWrapper(Achievment, "achievements");
