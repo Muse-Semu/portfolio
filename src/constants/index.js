@@ -431,7 +431,7 @@ const achievements = [
     icon: debezium,
     iconBg: "#E6DEDD",
     date: "2025 ",
-    link: "https://www.act.com.et/",
+    link: "",
     code: "",
     points: [
       "Designed and implemented Change Data Capture (CDC) using Debezium and Kafka Connect to capture real-time database changes from PostgreSQL.",
@@ -447,7 +447,7 @@ const achievements = [
     icon: "redis",
     iconBg: "#E6DEDD",
     date: "2025",
-    link: "https://www.act.com.et/",
+    link: "",
     code: "",
     points: [
       "Implemented a Redis-based caching system to optimize resource-intensive operations like complex queries and procedural validations, achieving a 60% reduction in query response times.",
@@ -463,7 +463,7 @@ const achievements = [
     icon: "postgre",
     iconBg: "#E6DEDD",
     date: "2024 - Present",
-    link: "https://www.act.com.et/",
+    link: "",
     code: "",
     points: [
       "Developed PL/pgSQL procedures to implement complex business rule validations, reducing validation processing time by 50% compared to application-layer logic.",
@@ -480,7 +480,7 @@ const achievements = [
     icon: activemq,
     iconBg: "#E6DEDD",
     date: "2025",
-    link: "https://www.act.com.et/",
+    link: "",
     code: "",
     points: [
       "Designed and implemented a reliable notification service using Artemis ActiveMQ queues to manage and process message delivery.",
