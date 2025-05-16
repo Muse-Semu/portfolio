@@ -28,10 +28,10 @@ const Hero = () => {
           <ul className="flex justify-center  items-center gap-7 mt-6">
             <li className="rounded-full h-12 flex items-center justify-center w-12 bg-white">
               <a
-                href="https://www.linkedin.com/in/semu-muse-582a36280/"
+                href="https://www.linkedin.com/in/muse-semu-582a36280/"
                 target="_blank"
               >
-                {" "}
+               
                 <img
                   src={linkedin}
                   alt="Linkedin"

@@ -209,7 +209,7 @@ const experiences = [
     company_name: "Atlas Computer Technology",
     icon: atlas,
     iconBg: "#E6DEDD",
-    date: "2023 - Present",
+    date: "2022 - Present",
     link: "https://www.act.com.et/",
     code: "",
     points: [
