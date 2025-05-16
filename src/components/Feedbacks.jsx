@@ -176,7 +176,7 @@ const Feedbacks = () => {
         editingTestimonial={editingTestimonial}
       />
       <div
-        className={`pb-14 ${styles.paddingX} grid lg:grid-cols-2 gap-7 mt-12`}
+        className={`pb-14 ${styles.paddingX} grid lg:grid-cols-1 gap-7 mt-12`}
       >
         {testimonials && testimonials.length > 0
           ? testimonials
