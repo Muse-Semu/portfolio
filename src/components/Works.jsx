@@ -67,7 +67,7 @@ const ProjectCard = ({
           <div className="mt-2 flex flex-wrap gap-2 min-h-[48px]">
             {tags.map((tag) => (
               <p
-                key={`${name}-${tag.name}`}
+                key={`${tag.name}`}
                 className={`text-[14px] ${tag.color}`}
               >
                 #{tag.name}
@@ -140,10 +140,10 @@ const Works = () => {
             >
               {category.category}
             </motion.h3>
-            <div className="grid grid-cols-1 gap-7 sm:grid-cols-2  mx-auto">
+            <div className="grid grid-cols-1 gap-7 sm:grid-cols-2  ">
               {category.contents.map((project, projectIndex) => (
                 <ProjectCard
-                  key={`project-${categoryIndex}-${projectIndex}`}
+                  key={`project-${categoryIndex}-${projectIndex}-${project.name}`}
                   index={
                     categoryIndex * category.contents.length + projectIndex
                   }
