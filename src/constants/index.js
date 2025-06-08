@@ -209,7 +209,7 @@ const experiences = [
     company_name: "Atlas Computer Technology",
     icon: atlas,
     iconBg: "#E6DEDD",
-    date: "2022 - Present",
+    date: "December 2023 - Present",
     link: "https://www.act.com.et/",
     code: "",
     points: [
@@ -247,7 +247,9 @@ const experiences = [
   },
 ];
 
-const testimonials = [];
+const testimonials = [
+  // "I had the privilege of leading a team where Muse Semu was a core member for over a year, primarily focused on backend development. Throughout our time working together, Muse consistently demonstrated exceptional growth and technical capability, quickly establishing himself as a highly reliable and skilled developer. His attention to detail is outstanding, and he approaches every task with precision and thoughtfulness. Muse has a proactive mindset he's thorough in gathering requirements early on, often asking well structured and insightful questions that help clarify objectives and avoid ambiguity. He’s also excellent at identifying potential issues ahead of time and either resolving them independently or raising them for discussion before they escalate. His research skills are top notch; he frequently explores new technologies and proposes innovative solutions that improve performance and efficiency. What stands out most is his ability to write clean, maintainable, and efficient code, paired with a solid understanding of backend architecture and best practices. Muse was a key contributor to our team’s success, and his dedication, problem solving ability, and collaborative spirit made him a pleasure to work with. Muse’s dedication, problem solving ability, and collaborative spirit made him an invaluable part of our team, and his contributions had a lasting positive impact on our projects."
+];
 
 const projects = [
   {
