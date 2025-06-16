@@ -71,6 +71,7 @@ import avatar2 from './avatar-2.png';
 import keycloak from './keycloak.png';
 import vault from './vault.png';
 import consul from './consul.svg';
+import elasticsearch from './elasticsearch.png';
 export {
   logo,
   backend,
@@ -143,5 +144,6 @@ export {
   keycloak,
   vault,
   consul,
+  elasticsearch,
 
 };

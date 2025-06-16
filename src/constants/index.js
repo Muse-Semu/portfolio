@@ -62,6 +62,7 @@ import {
   keycloak,
   consul,
   vault,
+  elasticsearch,
 } from "../assets";
 
 export const navLinks = [
@@ -385,6 +386,7 @@ const tech = [
       { name: "Keycloak", icon: keycloak },
       { name: "Consul", icon: consul },
       { name: "HashiCorp Vault", icon: vault },
+      { name: "Elasticsearch", icon: elasticsearch },
     ],
   },
   {
