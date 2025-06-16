@@ -66,6 +66,11 @@ import api from "./api.png";
 import microservice from "./microservice.png";
 import coding from "./coding.png";
 import OpenTelemetry from './OpenTelemetry.png';
+import avatar from './avatar.png';
+import avatar2 from './avatar-2.png';
+import keycloak from './keycloak.png';
+import vault from './vault.png';
+import consul from './consul.svg';
 export {
   logo,
   backend,
@@ -132,6 +137,11 @@ export {
   api,
   microservice,
   coding,
-  OpenTelemetry
+  OpenTelemetry,
+  avatar,
+  avatar2,
+  keycloak,
+  vault,
+  consul,
 
 };
