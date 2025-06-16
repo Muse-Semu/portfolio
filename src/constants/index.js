@@ -59,6 +59,9 @@ import {
   microservice,
   coding,
   OpenTelemetry,
+  keycloak,
+  consul,
+  vault,
 } from "../assets";
 
 export const navLinks = [
@@ -358,20 +361,32 @@ const projects = [
 
 const tech = [
   {
-    title: "Backend & Integration",
+    title: "Backend Development",
     items: [
       { name: "Spring Boot", icon: springboot },
       { name: "Node.js", icon: nodejs },
       { name: "Django", icon: django },
+    ],
+  },
+  {
+    title: "Event Streaming & Messaging",
+    items: [
       { name: "Apache Kafka", icon: kafka },
       { name: "Apache ActiveMQ", icon: activemq },
       { name: "Apache Camel", icon: apachecamel },
       { name: "Kafka Connect", icon: kafka },
       { name: "Debezium", icon: debezium },
-      { name: "OpenTelemetry", icon: OpenTelemetry },
     ],
   },
-
+  {
+    title: "Security & Service Management",
+    items: [
+      { name: "OpenTelemetry", icon: OpenTelemetry },
+      { name: "Keycloak", icon: keycloak },
+      { name: "Consul", icon: consul },
+      { name: "HashiCorp Vault", icon: vault },
+    ],
+  },
   {
     title: "Frontend Development",
     items: [
@@ -380,7 +395,6 @@ const tech = [
       { name: "Tailwind CSS", icon: tailwind },
     ],
   },
-
   {
     title: "Database & Caching",
     items: [
