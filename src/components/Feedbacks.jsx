@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import TestimonialForm from "./TestimonialForm";
 import useTestimonialStore from "../store/testimonialStore";
+import { avatar, avatar2 } from "../assets";
 
 const FeedbackCard = ({
   index,
@@ -31,6 +32,8 @@ const FeedbackCard = ({
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1 flex-1 flex flex-col">
         <div>
+          they will give me list of records and i will send request, and follow
+          up.
           <span className="text-white tracking-wider text-[18px]">
             {isExpanded ? testimonial : truncateText(testimonial)}
           </span>
@@ -63,8 +66,8 @@ const FeedbackCard = ({
             )}
           </div>
           <img
-            src={image}
-            alt={`feedback_by-${name}`}
+            src={image? image : avatar2}
+            alt={avatar}
             className="w-10 h-10 rounded-full object-cover"
           />
         </div>
