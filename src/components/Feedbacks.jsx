@@ -32,8 +32,7 @@ const FeedbackCard = ({
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1 flex-1 flex flex-col">
         <div>
-          they will give me list of records and i will send request, and follow
-          up.
+          
           <span className="text-white tracking-wider text-[18px]">
             {isExpanded ? testimonial : truncateText(testimonial)}
           </span>
