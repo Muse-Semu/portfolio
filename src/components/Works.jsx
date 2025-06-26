@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -22,7 +22,8 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      animate={isExpanded ? { scale: 1.02 } : { scale: 1 }}
+      initial="hidden"
+      animate="show"
       transition={{ type: "spring", stiffness: 300 }}
     >
       <Tilt
@@ -33,7 +34,7 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl w-full flex flex-col"
       >
-        <div className="relative w-full  h-[230px]">
+        <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt="project_image"
@@ -65,9 +66,9 @@ const ProjectCard = ({
             {name}
           </h3>
           <div className="mt-2 flex flex-wrap gap-2 min-h-[48px]">
-            {tags.map((tag) => (
+            {tags.map((tag, tagIndex) => (
               <p
-                key={`${tag.name}`}
+                key={`${tag.name}-${tagIndex}`}
                 className={`text-[14px] ${tag.color}`}
               >
                 #{tag.name}
@@ -75,22 +76,23 @@ const ProjectCard = ({
             ))}
           </div>
 
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="mt-4"
-            >
-              <div className="max-h-[300px] overflow-y-auto pr-2">
-                <p className="text-secondary text-[16px] leading-[26px]">
-                  {description}
-                </p>
-              </div>
-              
-            </motion.div>
-          )}
+          <AnimatePresence>
+            {isExpanded && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="mt-4"
+              >
+                <div className="max-h-[300px] overflow-y-auto pr-2">
+                  <p className="text-secondary text-[16px] leading-[26px]">
+                    {description}
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
@@ -111,7 +113,12 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={textVariant()}
+    >
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
@@ -136,17 +143,18 @@ const Works = () => {
           <div key={`category-${categoryIndex}`} className="mb-12">
             <motion.h3
               variants={textVariant()}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
               className="text-white font-bold text-[28px] mb-6"
             >
               {category.category}
             </motion.h3>
-            <div className="grid grid-cols-1 gap-7 sm:grid-cols-2  ">
+            <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
               {category.contents.map((project, projectIndex) => (
                 <ProjectCard
                   key={`project-${categoryIndex}-${projectIndex}-${project.name}`}
-                  index={
-                    categoryIndex * category.contents.length + projectIndex
-                  }
+                  index={categoryIndex * category.contents.length + projectIndex}
                   {...project}
                 />
               ))}
@@ -154,7 +162,7 @@ const Works = () => {
           </div>
         ))}
       </div>
-    </>
+    </motion.section>
   );
 };
 
