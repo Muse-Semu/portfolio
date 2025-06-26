@@ -63,6 +63,9 @@ import {
   consul,
   vault,
   elasticsearch,
+  ksks1,
+  ksks2,
+  ksks3,
 } from "../assets";
 
 export const navLinks = [
@@ -304,6 +307,7 @@ const projects = [
       },
     ],
   },
+
   {
     category: "Personal Projects",
     contents: [
@@ -333,9 +337,8 @@ const projects = [
           { name: "tailwind", color: "pink-text-gradient" },
           { name: "javascript", color: "blue-text-gradient" },
           { name: "python", color: "green-text-gradient" },
-          { name: "postgreS", color: "green-text-gradient" },
+          { name: "postgres", color: "white-text-gradient" },
           { name: "redux", color: "pink-text-gradient" },
-          { name: "tailwind", color: "blue-text-gradient" },
         ],
         image: food,
         images: [food, creator, tesla],
@@ -358,6 +361,29 @@ const projects = [
       },
     ],
   },
+
+  {
+    category: "Freelance Projects",
+    contents: [
+      {
+        name: "Banking Management System",
+        description:
+          "Developed a secure banking management platform using Django, Django REST Framework, React, and Redux. Implemented role-based access control (RBAC) with granular permissions, ensuring secure user access. Integrated email notification services for user actions, improving communication efficiency by 25%. Optimized PostgreSQL database for high-performance transaction processing, reducing query times by 40%. Built a responsive UI with Tailwind CSS, enhancing user experience across 10,000+ monthly active users.",
+        tags: [
+          { name: "django", color: "green-text-gradient" },
+          { name: "DiangoRestframework(DRF)", color: "blue-text-gradient" },
+          { name: "react", color: "blue-text-gradient" },
+          { name: "redux", color: "pink-text-gradient" },
+          { name: "postgresql", color: "green-text-gradient" },
+          { name: "tailwind", color: "blue-text-gradient" },
+
+        ],
+        image: ksks1,
+        images: [ksks2, ksks3,],
+        source_code_link: "",
+      },
+    ],
+  }
 ];
 
 const tech = [
@@ -467,8 +493,8 @@ const achievements = [
       "Generated cache keys using SHA-256 hashing of input data to ensure unique and secure identification of cached results, processing 10,000+ unique keys daily with zero collisions.",
       "Stored sensitive cache keys in Vault, enhancing security and compliance with data protection standards, securing 100% of sensitive cache data.",
       "Reduced database load by caching frequently accessed data, decreasing database CPU usage by 45% in high-traffic scenarios.",
-      "Designed cache invalidation strategies to maintain data consistency, achieving 98% cache hit accuracy for dynamic datasets."
-    ]
+      "Designed cache invalidation strategies to maintain data consistency, achieving 98% cache hit accuracy for dynamic datasets.",
+    ],
   },
   {
     title: "Business Logic Optimization in PostgreSQL",
@@ -483,8 +509,8 @@ const achievements = [
       "Optimized query performance using indexing strategies, improving query execution times by 70% for frequently accessed rules and datasets.",
       "Resolved race conditions in concurrent transactions through proper locking mechanisms, ensuring 100% data integrity across 5,000 daily transactions.",
       "Integrated database procedures with Spring Boot applications, enabling seamless rule evaluation with a 30% reduction in application-to-database round-trip latency.",
-      "Designed reusable and maintainable rule logic to support evolving business requirements, cutting development time for new rules by 40% and reducing technical debt."
-    ]
+      "Designed reusable and maintainable rule logic to support evolving business requirements, cutting development time for new rules by 40% and reducing technical debt.",
+    ],
   },
 
   {
