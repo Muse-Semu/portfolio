@@ -51,8 +51,8 @@ const About = () => {
         specialize in architecting scalable web applications, excelling in
         Spring Boot for high-performance backend systems. I design
         microservices, optimize PostgreSQL databases, and integrate seamlessly
-        with frontend technologies like React.js. With expertise in DevOps, I
-        leverage Kubernetes and Docker for scalable deployments, ensuring
+        with frontend technologies like React.js. With familiarity with DevOps, I
+        am skilled in Kubernetes and Docker for scalable deployments, ensuring
         resilience in production. Passionate about solving complex backend
         challenges, I thrive in cross-functional teams, delivering innovative
         and high-performing digital solutions.
