@@ -260,7 +260,7 @@ const projects = [
       {
         name: "Core Banking System",
         description:
-          "Developed a robust core banking system at Atlas Computer Technology, leveraging Spring Boot and microservices. Implemented service discovery and health checks using Consul for resilient communication. Integrated secure authentication via Keycloak and designed a notification service with dynamic SMS/email templates. Created PostgreSQL procedures to enforce invoice cancellation limits per business rules. Built an API for financial system integration and implemented Change Data Capture using Debezium and Kafka Connect for real-time data replication and auditing.",
+          "Developed a robust core banking system at Atlas Computer Technology, leveraging Spring Boot and microservices. Implemented service discovery and health checks using Consul for resilient communication. Integrated secure authentication via Keycloak and designed a notification service with dynamic SMS/email templates. Created PostgreSQL procedures to enforce complex business rules like transaction limits and loan eligibility. Built an API for financial system integration and implemented Change Data Capture using Debezium and Kafka Connect for real-time data replication and auditing.",
         tags: [
           { name: "springboot", color: "blue-text-gradient" },
           { name: "postgresql", color: "green-text-gradient" },
@@ -376,14 +376,13 @@ const projects = [
           { name: "redux", color: "pink-text-gradient" },
           { name: "postgresql", color: "green-text-gradient" },
           { name: "tailwind", color: "blue-text-gradient" },
-
         ],
         image: ksks1,
-        images: [ksks2, ksks3,],
+        images: [ksks2, ksks3],
         source_code_link: "",
       },
     ],
-  }
+  },
 ];
 
 const tech = [
