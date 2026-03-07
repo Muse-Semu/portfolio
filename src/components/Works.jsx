@@ -47,7 +47,7 @@ const ProjectCard = ({
             isExpanded ? "bg-black bg-opacity-10 p-4 rounded-lg" : ""
           }`}
         >
-          <h3 className="text-white font-bold text-[24px] line-clamp-2">
+          <h3 className="text-text-base font-bold text-[24px] line-clamp-2">
             {name}
           </h3>
           <div className="mt-2 flex flex-wrap gap-2 min-h-[48px]">
@@ -112,7 +112,7 @@ const Works = () => {
         {projects.map((category, categoryIndex) => (
           <div key={`category-${categoryIndex}`} className="mb-12">
             <h3
-              className="text-white font-bold text-[28px] mb-6"
+              className="text-text-base font-bold text-[28px] mb-6"
             >
               {category.category}
             </h3>

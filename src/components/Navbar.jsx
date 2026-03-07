@@ -44,7 +44,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
           <div className="flex flex-col">
-            <span className="text-white text-[18px] font-bold cursor-pointer leading-tight tracking-wider">
+            <span className="text-text-base text-[18px] font-bold cursor-pointer leading-tight tracking-wider">
               Muse Semu
             </span>
             <span className="text-accent text-[13px] font-medium hidden sm:block leading-tight tracking-wide">
@@ -61,7 +61,7 @@ const Navbar = () => {
                 ${
                   active === nav.title 
                     ? "text-accent bg-white/5 shadow-[0_0_15px_rgba(56,189,248,0.15)]" 
-                    : "text-secondary hover:text-white hover:bg-white/5"
+                    : "text-secondary hover:text-text-base hover:bg-white/5"
                 }
               `}
               onClick={() => setActive(nav.title)}
@@ -97,7 +97,7 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] w-full text-center py-2 rounded-lg transition-all duration-300 ${
                     active === nav.title 
                       ? "text-accent bg-tertiary shadow-md" 
-                      : "text-secondary hover:text-white hover:bg-white/5"
+                      : "text-secondary hover:text-text-base hover:bg-white/5"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);

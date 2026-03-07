@@ -26,18 +26,18 @@ const FeedbackCard = ({
   };
 
   return (
-    <div className="bg-black-200 p-10 border border-tertiary shadow-card rounded-3xl min-h-[400px] flex flex-col">
-      <p className="text-white font-black text-[48px]">"</p>
+    <div className="bg-tertiary p-10 border border-black-200/20 shadow-card rounded-3xl min-h-[400px] flex flex-col">
+      <p className="text-text-base font-black text-[48px]">"</p>
       <div className="mt-1 flex-1 flex flex-col">
         <div>
           
-          <span className="text-white tracking-wider text-[18px]">
+          <span className="text-text-base tracking-wider text-[18px]">
             {isExpanded ? testimonial : truncateText(testimonial)}
           </span>
           {testimonial.split(" ").length > 10 && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-white hover:underline text-[14px] ml-2"
+              className="text-text-base hover:underline text-[14px] ml-2"
             >
               {isExpanded ? "Read Less" : "Read More"}
             </button>
@@ -45,7 +45,7 @@ const FeedbackCard = ({
         </div>
         <div className="mt-7 flex justify-between items-center gap-1">
           <div className="flex-1 flex flex-col">
-            <p className="text-white font-medium text-[16px]">
+            <p className="text-text-base font-medium text-[16px]">
               <span className="blue-text-gradient">@</span> {name}
             </p>
             <p className="mt-1 text-secondary text-[12px]">
@@ -134,7 +134,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <div className="mt-12 bg-black-100 rounded-[20px] relative">
+    <div className="mt-12 bg-primary rounded-[20px] relative border border-black-200/10">
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
@@ -145,7 +145,7 @@ const Feedbacks = () => {
       </div>
       <button
         onClick={() => openModal()}
-        className="fixed bottom-8 right-8 bg-tertiary py-3 px-4 rounded-3xl text-white hover:bg-tertiary/80 flex items-center gap-2 z-[9999] shadow-lg"
+        className="fixed bottom-8 right-8 bg-tertiary py-3 px-4 rounded-3xl text-text-base hover:bg-tertiary/80 flex items-center gap-2 z-[9999] shadow-lg"
         title="Add Testimonial"
       >
         <svg
@@ -165,7 +165,7 @@ const Feedbacks = () => {
         Add Testimonial
       </button>
       {isLoading && (
-        <p className="text-white text-center py-4">Loading testimonials...</p>
+        <p className="text-text-base text-center py-4">Loading testimonials...</p>
       )}
       {error && <p className="text-red-500 text-center py-4">{error}</p>}
       <TestimonialForm
@@ -200,14 +200,14 @@ const Feedbacks = () => {
           {visibleCount < testimonials.length ? (
             <button
               onClick={handleSeeMore}
-              className="bg-tertiary mb-5 py-2 px-6 rounded-lg text-white hover:bg-tertiary/80"
+              className="bg-tertiary mb-5 py-2 px-6 rounded-lg text-text-base shadow hover:bg-tertiary/80"
             >
               See More ...
             </button>
           ) : (
             <button
               onClick={handleShowLess}
-              className="bg-tertiary py-2 px-6 rounded-lg text-white hover:bg-tertiary/80"
+              className="bg-tertiary py-2 px-6 rounded-lg text-text-base shadow hover:bg-tertiary/80"
             >
               Show Less
             </button>

@@ -16,8 +16,8 @@ const AchievmentCard = ({ achievement }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "var(--tertiary)",
+        color: "var(--text-base)",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={achievement.date}
@@ -33,7 +33,7 @@ const AchievmentCard = ({ achievement }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">
+        <h3 className="text-text-base text-[24px] font-bold">
           {achievement.title}
         </h3>
         <p
@@ -48,7 +48,7 @@ const AchievmentCard = ({ achievement }) => {
         {achievement.points.map((point, index) => (
           <li
             key={`achievement-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-text-base/80 text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
@@ -58,7 +58,7 @@ const AchievmentCard = ({ achievement }) => {
         <ul className="flex items-center justify-center  gap-9">
 
           <li className="flex flex-col items-center justify-center">
-            <a href={achievement.code} target="_blank">
+            <a href={achievement.code} target="_blank" className="text-text-base">
               <img src={github} alt="" className="h-10 w-10 rounded-full" />{" "}
               <span className="text-center">code</span>
             </a>

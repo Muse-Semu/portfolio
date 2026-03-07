@@ -9,6 +9,7 @@ import {
   Tech,
   Works,
   RealWorldChallenges,
+  ThemeToggle,
 } from "./components";
 import KeyAchievment from "./components/KeyAchievment";
 
@@ -30,6 +31,7 @@ const App = () => {
         <div className="relative z-0 contact-wrapper bg-tertiary pb-12">
           <Contact />
         </div>
+        <ThemeToggle />
       </div>
     </BrowserRouter>
   );

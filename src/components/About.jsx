@@ -18,7 +18,7 @@ const ServiceCard = ({ index, title, icon }) => (
           className="w-16 h-16 object-contain"
         />
 
-        <h3 className="text-white text-[20px] font-bold text-center">
+        <h3 className="text-text-base text-[20px] font-bold text-center">
           {title}
         </h3>
       </div>
@@ -38,7 +38,7 @@ const About = () => {
         I am a dedicated Backend and DevOps Engineer passionate about architecting scalable, resilient, and high-performance systems. I specialize in building robust microservices with Spring Boot, optimizing complex PostgreSQL databases, and implementing event-driven architectures utilizing Kafka and Debezium. With deep expertise in the DevOps lifecycle, I orchestrate zero-downtime production deployments using Docker and Kubernetes, while ensuring system reliability through OpenTelemetry observability and CI/CD pipeline automation via Jenkins. I thrive on solving complex architectural challenges and delivering solutions that drive massive efficiency gains.
       </p>
 
-      <p className="text-white font-bold text-[28px] mt-6">Services</p>
+      <p className="text-text-base font-bold text-[28px] mt-6">Services</p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

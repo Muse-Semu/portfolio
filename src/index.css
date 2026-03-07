@@ -4,13 +4,50 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Dark Theme variables (default/slate palette) */
+  --primary: #0f172a;
+  --secondary: #94a3b8;
+  --tertiary: #1e293b;
+  --black-100: #020617;
+  --black-200: #09090b;
+  --white-100: #f8fafc;
+  --accent: #38bdf8;
+  
+  --text-base: #f8fafc; /* For primary paragraph text */
+  --bg-form: #1e293b; 
+}
+
+.light-theme {
+  /* Light Theme variables (clean minimal palette) */
+  --primary: #f8fafc;       /* very light slate for main backgrounds */
+  --secondary: #475569;     /* medium slate for subtle text/icons */
+  --tertiary: #f1f5f9;      /* slightly darker slate for cards/Navbar */
+  --black-100: #ffffff;     /* pure white for prominent cards */
+  --black-200: #e2e8f0;     /* light border/zinc replacement */
+  --white-100: #0f172a;     /* inverted text color (slate 900) */
+  --accent: #0ea5e9;        /* slightly darker sky blue for contrast */
+  
+  --text-base: #334155;     /* Dark text for paragraph readability */
+  --bg-form: #f1f5f9;       /* Input backgrounds */
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text-base);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 .hash-span {

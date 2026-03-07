@@ -33,7 +33,7 @@ const Tech = () => {
                 <div className="w-28 h-28 " key={item.name}>
                   {/* < icon={item.icon} /> */}
                   <img src={item.icon} alt="" />
-                  <h1 className=" text-center">{item.name}</h1>
+                  <h1 className="text-text-base text-center">{item.name}</h1>
                 </div>
               ))}
             </div>

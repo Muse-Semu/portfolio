@@ -7,6 +7,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import RealWorldChallenges from './RealWorldChallenges';
+import ThemeToggle from './ThemeToggle';
 
 export {
   Hero,
@@ -17,5 +18,6 @@ export {
   Tech,
   Feedbacks,
   Contact,
-  RealWorldChallenges
+  RealWorldChallenges,
+  ThemeToggle
 };
