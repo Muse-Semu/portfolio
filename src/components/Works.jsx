@@ -18,23 +18,23 @@ const ProjectCard = ({
 
   return (
     <div className="w-full h-full">
-      <div className="bg-tertiary p-5 rounded-2xl w-full flex flex-col h-full hover:shadow-card transition-shadow duration-300">
-        <div className="relative w-full h-[230px]">
+      <div className="bg-primary p-6 rounded-3xl border border-black-200/10 w-full flex flex-col h-full hover:shadow-card hover:-translate-y-2 transition-all duration-300">
+        <div className="relative w-full h-[250px] overflow-hidden rounded-2xl shadow-sm">
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-2xl hover:scale-110 transition-transform duration-500"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             {source_code_link && (
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                className="bg-black/70 backdrop-blur-md w-11 h-11 rounded-full flex justify-center items-center cursor-pointer hover:bg-black/90 transition-colors"
               >
                 <img
                   src={github}
                   alt="source code"
-                  className="w-1/2 h-1/2 object-contain"
+                  className="w-1/2 h-1/2 object-contain filter invert"
                   title="view code"
                 />
               </div>
@@ -42,22 +42,18 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div
-          className={`mt-5 flex flex-col flex-grow transition-all duration-300 ${
-            isExpanded ? "bg-black bg-opacity-10 p-4 rounded-lg" : ""
-          }`}
-        >
-          <h3 className="text-text-base font-bold text-[24px] line-clamp-2">
+        <div className="mt-6 flex flex-col flex-grow">
+          <h3 className="text-text-base font-bold text-[22px] line-clamp-2 leading-tight">
             {name}
           </h3>
-          <div className="mt-2 flex flex-wrap gap-2 min-h-[48px]">
+          <div className="mt-3 flex flex-wrap gap-2 min-h-[48px]">
             {tags.map((tag, tagIndex) => (
-              <p
+              <span
                 key={`${tag.name}-${tagIndex}`}
-                className={`text-[14px] ${tag.color}`}
+                className={`text-[12px] font-semibold px-2 py-1 bg-tertiary rounded-md border border-black-200/10 ${tag.color}`}
               >
                 #{tag.name}
-              </p>
+              </span>
             ))}
           </div>
 
@@ -75,12 +71,23 @@ const ProjectCard = ({
             )}
           </div>
 
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-secondary text-white px-4 py-2 rounded-lg text-[16px] mt-4 hover:bg-opacity-80 transition-colors"
-          >
-            {isExpanded ? "See Less" : "See More"}
-          </button>
+          <div className="mt-4 flex justify-start">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-text-base text-[14px] font-medium border border-secondary/30 px-4 py-2 rounded-full hover:bg-secondary/10 transition-colors flex items-center gap-2"
+            >
+              {isExpanded ? "See Less" : "See More"}
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className={`h-4 w-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

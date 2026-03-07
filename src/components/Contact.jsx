@@ -188,22 +188,24 @@ const Contact = () => {
       </div>
 
       {modal.isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[9999]">
           <div
-            className={`p-6 rounded-lg shadow-xl ${
-              modal.isSuccess ? "bg-green-600" : "bg-red-600"
-            } text-white max-w-md w-full mx-4 transition-all scale-100 opacity-100`}
+            className={`p-8 rounded-2xl shadow-card border-l-8 ${
+              modal.isSuccess ? "border-green-500" : "border-red-500"
+            } bg-primary text-text-base max-w-md w-full mx-4 transition-all`}
           >
-            <h3 className="text-xl font-bold mb-4">
+            <h3 className={`text-2xl font-bold mb-2 ${modal.isSuccess ? "text-green-500" : "text-red-500"}`}>
               {modal.isSuccess ? "Success!" : "Error"}
             </h3>
-            <p className="mb-6">{modal.message}</p>
-            <button
-              onClick={closeModal}
-              className="bg-white text-gray-800 px-4 py-2 rounded hover:bg-gray-100 transition-colors"
-            >
-              Close
-            </button>
+            <p className="text-secondary text-[16px] leading-[26px] mb-6">{modal.message}</p>
+            <div className="flex justify-end">
+              <button
+                onClick={closeModal}
+                className="bg-tertiary py-2 px-6 rounded-xl outline-none text-text-base font-bold shadow-md hover:shadow-lg transition-all border border-black-200/10"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -8,7 +8,7 @@ const Hero = () => {
       <div
         className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-col md:flex-row items-center justify-between gap-10 w-full`}
       >
-        <div className="flex flex-col md:w-1/2">
+        <div className="flex flex-col md:w-3/4 lg:w-2/3">
           <div className="flex flex-row items-center gap-4">
             <div className="w-5 h-5 rounded-full bg-accent" />
             <div className="h-1 w-20 bg-gradient-to-r from-accent to-transparent" />
@@ -44,20 +44,6 @@ const Hero = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
               Download CV
             </a>
-          </div>
-        </div>
-
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <div className="w-full max-w-[350px] bg-tertiary p-6 rounded-2xl shadow-card border border-white/10 flex flex-col items-center">
-            <img
-              src={muse}
-              alt="Muse Semu"
-              className="w-56 h-56 object-cover rounded-full border-4 border-tertiary shadow-xl hover:border-accent transition-colors duration-300"
-            />
-            <h3 className="text-text-base text-2xl font-bold text-center mt-6">
-              Muse Semu
-            </h3>
-            <p className="text-secondary text-center mt-2 font-medium">Backend & DevOps Engineer</p>
           </div>
         </div>
       </div>

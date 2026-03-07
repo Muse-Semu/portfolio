@@ -37,7 +37,7 @@ const FeedbackCard = ({
           {testimonial.split(" ").length > 10 && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-text-base hover:underline text-[14px] ml-2"
+              className="text-accent hover:text-accent/80 font-medium text-[14px] ml-2 transition-colors"
             >
               {isExpanded ? "Read Less" : "Read More"}
             </button>
@@ -195,25 +195,29 @@ const Feedbacks = () => {
               </p>
             )}
       </div>
-      {testimonials && testimonials.length > 4 && (
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-8">
           {visibleCount < testimonials.length ? (
             <button
               onClick={handleSeeMore}
-              className="bg-tertiary mb-5 py-2 px-6 rounded-lg text-text-base shadow hover:bg-tertiary/80"
+              className="text-text-base text-[16px] font-medium border border-accent/40 bg-accent/5 px-6 py-3 rounded-full hover:bg-accent/10 hover:border-accent transition-all duration-300 flex items-center gap-2 shadow-sm"
             >
-              See More ...
+              See More Testimonials
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
           ) : (
             <button
               onClick={handleShowLess}
-              className="bg-tertiary py-2 px-6 rounded-lg text-text-base shadow hover:bg-tertiary/80"
+              className="text-text-base text-[16px] font-medium border border-secondary/40 bg-secondary/5 px-6 py-3 rounded-full hover:bg-secondary/10 hover:border-secondary transition-all duration-300 flex items-center gap-2 shadow-sm"
             >
               Show Less
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              </svg>
             </button>
           )}
         </div>
-      )}
     </div>
   );
 };
