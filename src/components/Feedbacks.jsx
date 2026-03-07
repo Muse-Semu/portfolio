@@ -145,7 +145,7 @@ const Feedbacks = () => {
       </div>
       <button
         onClick={() => openModal()}
-        className="fixed bottom-8 right-8 bg-tertiary py-3 px-4 rounded-3xl text-text-base hover:bg-tertiary/80 flex items-center gap-2 z-[9999] shadow-lg"
+        className="fixed bottom-6 left-6 bg-tertiary py-3 px-5 rounded-full border border-accent/30 text-text-base font-semibold shadow-card hover:border-accent hover:scale-105 transition-all duration-300 flex items-center gap-2 z-[9999]"
         title="Add Testimonial"
       >
         <svg

@@ -166,10 +166,10 @@ const TestimonialForm = ({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 backdrop-blur-sm">
       <div
-        className="bg-black-100 p-8 rounded-2xl w-full max-w-md min-h-[600px] max-h-[80vh] overflow-y-auto"
+        className="bg-primary border border-black-200/10 shadow-md p-8 rounded-2xl w-full max-w-md min-h-[600px] max-h-[80vh] overflow-y-auto"
       >
-        <h3 className={styles.sectionSubText}>
-          {editingTestimonial ? "Update Testimonial" : "Add New Testimonial"}
+        <h3 className={styles.sectionHeadText}>
+          {editingTestimonial ? "Update" : "Add New"}
         </h3>
         <div className="mt-4">
           <div className="flex flex-col gap-4">
@@ -178,8 +178,8 @@ const TestimonialForm = ({
                 name="testimonial"
                 value={formData.testimonial}
                 onChange={handleChange}
-                placeholder="Testimonial"
-                className="p-2 rounded-lg bg-tertiary text-white min-h-[150px] w-full"
+                placeholder="Write your testimonial here..."
+                className="bg-bg-form py-4 px-6 placeholder:text-secondary text-text-base rounded-lg outline-none border border-black-200/20 focus:border-accent font-medium shadow-sm transition-colors min-h-[150px] w-full"
                 required
               />
               {errors.testimonial && (
@@ -195,7 +195,7 @@ const TestimonialForm = ({
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Name"
-                className="p-2 rounded-lg bg-tertiary text-white w-full"
+                className="bg-bg-form py-4 px-6 placeholder:text-secondary text-text-base rounded-lg outline-none border border-black-200/20 focus:border-accent font-medium shadow-sm transition-colors w-full"
                 required
               />
               {errors.name && (
@@ -208,8 +208,8 @@ const TestimonialForm = ({
                 name="designation"
                 value={formData.designation}
                 onChange={handleChange}
-                placeholder="Designation (your job title or position)"
-                className="p-2 rounded-lg bg-tertiary text-white w-full"
+                placeholder="Designation (your job title)"
+                className="bg-bg-form py-4 px-6 placeholder:text-secondary text-text-base rounded-lg outline-none border border-black-200/20 focus:border-accent font-medium shadow-sm transition-colors w-full"
                 required
               />
               {errors.designation && (
@@ -225,7 +225,7 @@ const TestimonialForm = ({
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Company"
-                className="p-2 rounded-lg bg-tertiary text-white w-full"
+                className="bg-bg-form py-4 px-6 placeholder:text-secondary text-text-base rounded-lg outline-none border border-black-200/20 focus:border-accent font-medium shadow-sm transition-colors w-full"
                 required
               />
               {errors.company && (
@@ -238,8 +238,8 @@ const TestimonialForm = ({
                 name="linkedin_url"
                 value={formData.linkedin_url}
                 onChange={handleChange}
-                placeholder="LinkedIn URL "
-                className="p-2 rounded-lg bg-tertiary text-white w-full"
+                placeholder="LinkedIn URL"
+                className="bg-bg-form py-4 px-6 placeholder:text-secondary text-text-base rounded-lg outline-none border border-black-200/20 focus:border-accent font-medium shadow-sm transition-colors w-full"
               />
               {errors.linkedin_url && (
                 <p className="text-red-500 text-sm mt-1">
@@ -248,13 +248,13 @@ const TestimonialForm = ({
               )}
             </div>
             <div>
-              <label htmlFor="input">Photo</label>
+              <label htmlFor="input" className="text-text-base font-medium ml-1">Profile Photo</label>
               <input
                 type="file"
                 name="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="p-2 rounded-lg bg-tertiary text-white w-full"
+                className="bg-bg-form py-3 px-4 text-text-base rounded-lg outline-none border border-black-200/20 w-full file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-accent/10 file:text-accent hover:file:bg-accent/20 cursor-pointer"
               />
             </div>
             {imagePreview && (
@@ -264,18 +264,18 @@ const TestimonialForm = ({
                 className="w-20 h-20 rounded-full object-cover mt-2"
               />
             )}
-            <div className="flex gap-4 justify-end">
+            <div className="flex gap-4 justify-end mt-4">
               <button
                 type="button"
                 onClick={handleCancel}
-                className=" w-60 bg-tertiary/90 py-2 px-4 rounded-lg text-white hover:bg-tertiary"
+                className="flex-[1] bg-bg-form py-3 px-4 rounded-xl outline-none text-text-base font-bold shadow-md hover:shadow-lg transition-all"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className=" w-60 bg-green-500 py-2 px-4 rounded-lg text-white hover:bg-green-600"
+                className="flex-[1] bg-accent hover:bg-accent/80 py-3 px-4 rounded-xl outline-none text-white font-bold shadow-md hover:shadow-lg transition-all"
               >
                 {editingTestimonial ? "Update" : "Add"}
               </button>
