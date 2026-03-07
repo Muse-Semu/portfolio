@@ -46,6 +46,23 @@ const Hero = () => {
             </a>
           </div>
         </div>
+
+        <div className="md:w-1/3 flex justify-center lg:justify-end mt-12 md:mt-0 relative">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+            {/* Soft backdrop glow to emulate cutout depth */}
+            <div className="absolute inset-0 bg-accent/20 rounded-full blur-[60px] -z-10 animate-pulse" />
+            
+            <img
+              src={muse}
+              alt="Muse Semu"
+              className="w-full h-full object-cover rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform duration-500 hover:shadow-[0_20px_50px_rgba(56,189,248,0.2)]"
+              style={{
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)'
+              }}
+            />
+          </div>
+        </div>
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
