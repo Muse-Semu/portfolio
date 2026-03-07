@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
 import TestimonialForm from "./TestimonialForm";
 import useTestimonialStore from "../store/testimonialStore";
 import { avatar, avatar2 } from "../assets";
@@ -28,7 +26,7 @@ const FeedbackCard = ({
   };
 
   return (
-    <motion.div className="bg-black-200 p-10 border border-[linear-gradient(90.13deg,#00cea8_1.9%,#bf61ff_97.5%)] rounded-3xl min-h-[400px] flex flex-col">
+    <div className="bg-black-200 p-10 border border-tertiary shadow-card rounded-3xl min-h-[400px] flex flex-col">
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1 flex-1 flex flex-col">
         <div>
@@ -71,7 +69,7 @@ const FeedbackCard = ({
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -140,10 +138,10 @@ const Feedbacks = () => {
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
-        <motion.div variants={textVariant()}>
+        <div>
           <p className={styles.sectionSubText}>What others say</p>
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-        </motion.div>
+        </div>
       </div>
       <button
         onClick={() => openModal()}

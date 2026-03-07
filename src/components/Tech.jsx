@@ -1,22 +1,20 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../hoc";
 import { tech, technologies } from "../constants";
-import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
 const Tech = () => {
   return (
-    <div>
-      <motion.div variants={textVariant()}>
+    <div className="flex flex-col w-full">
+      <div>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have Skilled on
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center mb-20 ml-2`}>
+        <h2 className={`${styles.sectionHeadText} text-center mb-10`}>
           Technologies
         </h2>
-      </motion.div>
+      </div>
       {/* <div className="flex flex-row flex-wrap justify-center gap-10 mt-5">
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>

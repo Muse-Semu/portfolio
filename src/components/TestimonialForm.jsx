@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { styles } from "../styles";
-import { motion } from "framer-motion";
 
 const TestimonialForm = ({
   isOpen,
@@ -166,10 +165,7 @@ const TestimonialForm = ({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 backdrop-blur-sm">
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
+      <div
         className="bg-black-100 p-8 rounded-2xl w-full max-w-md min-h-[600px] max-h-[80vh] overflow-y-auto"
       >
         <h3 className={styles.sectionSubText}>
@@ -286,17 +282,14 @@ const TestimonialForm = ({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {modal.isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
+          <div
             className={`p-6 rounded-lg shadow-xl ${
               modal.isSuccess ? "bg-green-600" : "bg-red-600"
-            } text-white max-w-md w-full mx-4`}
+            } text-white max-w-md w-full mx-4 transition-all scale-100 opacity-100`}
           >
             <h3 className="text-xl font-bold mb-4">
               {modal.isSuccess ? "Success!" : "Error"}
@@ -308,7 +301,7 @@ const TestimonialForm = ({
             >
               Close
             </button>
-          </motion.div>
+          </div>
         </div>
       )}
     </div>

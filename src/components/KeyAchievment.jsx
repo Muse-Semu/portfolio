@@ -3,7 +3,6 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -11,7 +10,7 @@ import { styles } from "../styles";
 import { achievements } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { anku, github, live } from "../assets";
+import { anku, github } from "../assets";
 
 const AchievmentCard = ({ achievement }) => {
   return (
@@ -57,21 +56,7 @@ const AchievmentCard = ({ achievement }) => {
       </ul>
       <div className="mt-8">
         <ul className="flex items-center justify-center  gap-9">
-          <li className="flex flex-col items-center justify-center">
-            <a
-              href={achievement.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={live}
-                alt=""
-                className="h-10 w-10 rounded-full"
-                srcSet=""
-              />
-              <span className="text-center">Live</span>
-            </a>
-          </li>
+
           <li className="flex flex-col items-center justify-center">
             <a href={achievement.code} target="_blank">
               <img src={github} alt="" className="h-10 w-10 rounded-full" />{" "}
@@ -87,14 +72,14 @@ const AchievmentCard = ({ achievement }) => {
 const Achievment = () => {
   return (
     <>
-      <motion.div >
+      <div>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Key Achievments.
         </h2>
-      </motion.div>
+      </div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

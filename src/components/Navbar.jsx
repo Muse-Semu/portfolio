@@ -27,44 +27,57 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-10 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      className={`w-full flex items-center py-4 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled 
+          ? "bg-primary/80 backdrop-blur-md border-b border-white/10 shadow-lg py-3" 
+          : "bg-transparent py-5"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className={`${styles.paddingX} w-full flex justify-between items-center max-w-7xl mx-auto`}>
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3 shrink-0"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Muse &nbsp;
-            <span className="sm:block hidden"> | Full stack Developer</span>
-          </p>
+          <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
+          <div className="flex flex-col">
+            <span className="text-white text-[18px] font-bold cursor-pointer leading-tight tracking-wider">
+              Muse Semu
+            </span>
+            <span className="text-accent text-[13px] font-medium hidden sm:block leading-tight tracking-wide">
+              Backend & DevOps
+            </span>
+          </div>
         </Link>
 
-        {/* <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row items-center gap-2">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`relative px-3 py-2 rounded-full cursor-pointer transition-all duration-300 group whitespace-nowrap
+                ${
+                  active === nav.title 
+                    ? "text-accent bg-white/5 shadow-[0_0_15px_rgba(56,189,248,0.15)]" 
+                    : "text-secondary hover:text-white hover:bg-white/5"
+                }
+              `}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`} className="text-[15px] font-medium tracking-wide">
+                {nav.title}
+              </a>
+              {/* Active Indicator Underline */}
+              {active === nav.title && (
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-accent rounded-t-full" />
+              )}
             </li>
           ))}
-        </ul> */}
+        </ul>
 
-        <div className=" flex flex-1 justify-end items-center">
-          
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -81,15 +94,17 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                  className={`font-poppins font-medium cursor-pointer text-[16px] w-full text-center py-2 rounded-lg transition-all duration-300 ${
+                    active === nav.title 
+                      ? "text-accent bg-tertiary shadow-md" 
+                      : "text-secondary hover:text-white hover:bg-white/5"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`#${nav.id}`} className="block w-full">{nav.title}</a>
                 </li>
               ))}
             </ul>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Muse\'s Portfolio</string>
+    <string name="title_activity_main">Muse\'s Portfolio</string>
+    <string name="package_name">com.muse.portfolio</string>
+    <string name="custom_url_scheme">com.muse.portfolio</string>
+</resources>

@@ -8,30 +8,27 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
+  RealWorldChallenges,
 } from "./components";
 import KeyAchievment from "./components/KeyAchievment";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar className="navbar" /> {/* Added class for targeting */}
+      <div className="relative z-0 bg-primary min-h-screen">
+        <div className="bg-primary bg-cover bg-no-repeat bg-center">
+          <Navbar className="navbar" />
           <Hero />
         </div>
         <About />
         <Experience />
         <Works />
-        <KeyAchievment className="key-achievement" />{" "}
-        {/* Added class for targeting */}
+        <RealWorldChallenges />
+        <KeyAchievment className="key-achievement" />
         <Tech />
         <Feedbacks />
-        <div className="relative z-0 contact-wrapper">
-          {" "}
-          {/* Added class for targeting */}
+        <div className="relative z-0 contact-wrapper bg-tertiary pb-12">
           <Contact />
-          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>

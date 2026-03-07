@@ -86,6 +86,10 @@ export const navLinks = [
     id: "achievements",
     title: "Achievements",
   },
+  {
+    id: "challenges",
+    title: "Real-World Challenges",
+  },
 
   {
     id: "tech",
@@ -212,24 +216,52 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Fullstack Developer",
+    title: "Software Engineer | Team Lead",
     company_name: "Atlas Computer Technology",
     icon: atlas,
     iconBg: "#E6DEDD",
-    date: "Dec 2023 - Present",
+    date: "Oct 2025 - Present",
     link: "https://www.act.com.et/",
     code: "",
-    userImpact: "500,000+ monthly active users",
+    userImpact: "Led critical development & production deployments",
     points: [
-      "Built scalable Spring Boot microservices, improving uptime by 40%.",
-      "Used OpenTelemetry to monitor metrics, reducing latency by 50%.",
-      "Configured Debezium and Kafka Connect for real-time data sync.",
-      "Optimized PostgreSQL and Redis, cutting response times by 60%.",
-      "Automated tasks with Cron jobs, streamlining operations for 200,000+ daily users.",
-      "Secured data with HashiCorp Vault, enhancing system reliability.",
-      "Developed Metabase/Superset dashboards, enabling insights for 200+ stakeholders.",
-      "Integrated SMS/email notifications, improving user communication by 30%.",
-      "Enhanced React-based UI, boosting engagement across devices.",
+      "Led the development and production deployment of the Integrated Justice and Court Management System (IJCMS).",
+      "Participated in building and deploying a Core Mobile Banking System, utilizing Docker and Kubernetes to run large-scale platforms in production.",
+      "Implemented full observability and distributed tracing using OpenTelemetry for microservices.",
+      "Configured Change Data Capture (CDC) utilizing Debezium and Kafka Connect for real-time data synchronization.",
+      "Optimized PostgreSQL and Redis architectures to significantly cut response times in high-throughput systems.",
+    ],
+  },
+  {
+    title: "Mid level Fullstack Developer",
+    company_name: "Atlas Computer Technology",
+    icon: atlas,
+    iconBg: "#E6DEDD",
+    date: "Jun 2024 - Oct 2025",
+    link: "https://www.act.com.et/",
+    code: "",
+    userImpact: "Scaled systems for 500,000+ monthly active users",
+    points: [
+      "Built scalable Spring Boot microservices, improving system uptime by 40%.",
+      "Automated critical business processes with Cron jobs, streamlining operations for 200,000+ daily users.",
+      "Secured sensitive application data using HashiCorp Vault, enhancing overall system reliability and compliance.",
+      "Developed Metabase and Superset dashboards, enabling data-driven insights for 200+ internal stakeholders.",
+      "Integrated SMS and email notification frameworks, improving user communication efficiency by 30%.",
+    ],
+  },
+  {
+    title: "Junior Full-stack Developer",
+    company_name: "Atlas Computer Technology",
+    icon: atlas,
+    iconBg: "#E6DEDD",
+    date: "Dec 2023 - Jun 2024",
+    link: "https://www.act.com.et/",
+    code: "",
+    userImpact: "Improved frontend engagement and backend efficiency",
+    points: [
+      "Enhanced React-based UI components, boosting user engagement and responsiveness across mobile and web devices.",
+      "Assisted in the optimization of baseline PostgreSQL queries, reducing initial load times for core application features.",
+      "Collaborated with senior engineers to implement and test RESTful APIs for internal tools.",
     ],
   },
   {
@@ -258,13 +290,26 @@ const projects = [
     category: "Professional Projects",
     contents: [
       {
+        name: "Integrated Justice and Court Management System (IJCMS)",
+        description:
+          "Served as Team Lead for the IJCMS project, driving both development and production deployment. Orchestrated a microservices architecture using Spring Boot and managed complex deployment strategies with Docker and Kubernetes to ensure high availability and reliability for legal and judicial operations.",
+        tags: [
+          { name: "springboot", color: "blue-text-gradient" },
+          { name: "kubernetes", color: "blue-text-gradient" },
+          { name: "docker", color: "green-text-gradient" },
+          { name: "postgresql", color: "pink-text-gradient" },
+        ],
+        image: ksks1,
+        images: [ksks2, ksks3],
+        source_code_link: "",
+      },
+      {
         name: "Core Banking System",
         description:
-          "Developed a robust core banking system at Atlas Computer Technology, leveraging Spring Boot and microservices. Implemented service discovery and health checks using Consul for resilient communication. Integrated secure authentication via Keycloak and designed a notification service with dynamic SMS/email templates. Created PostgreSQL procedures to enforce complex business rules like transaction limits and loan eligibility. Built an API for financial system integration and implemented Change Data Capture using Debezium and Kafka Connect for real-time data replication and auditing.",
+          "Developed a robust core banking system at Atlas Computer Technology, leveraging Spring Boot and microservices. Implemented service discovery and health checks using Consul for resilient communication. Integrated secure authentication via Keycloak and designed a notification service with dynamic SMS/email templates. Created PostgreSQL procedures to enforce complex business rules.",
         tags: [
           { name: "springboot", color: "blue-text-gradient" },
           { name: "postgresql", color: "green-text-gradient" },
-          { name: "kafka", color: "pink-text-gradient" },
           { name: "debezium", color: "blue-text-gradient" },
           { name: "consul", color: "green-text-gradient" },
           { name: "keycloak", color: "pink-text-gradient" },
@@ -276,9 +321,11 @@ const projects = [
       {
         name: "Mobile Banking System",
         description:
-          "Modernized a mobile banking system by migrating legacy JEE services to Spring Boot, enhancing performance and maintainability. Improved rule engines to manage banking transaction limits, ensuring compliance with financial regulations and efficient processing.",
+          "Participated in building and deploying a large-scale Core Mobile Banking System. Modernized legacy JEE services by migrating them to Spring Boot to enhance performance and maintainability. Led the production deployment strategy utilizing Docker and Kubernetes, ensuring the platform runs reliably at scale for end users.",
         tags: [
           { name: "springboot", color: "blue-text-gradient" },
+          { name: "kubernetes", color: "blue-text-gradient" },
+          { name: "docker", color: "green-text-gradient" },
           { name: "java", color: "green-text-gradient" },
         ],
         image: mobilebanking1,
@@ -464,21 +511,36 @@ const tech = [
 
 const achievements = [
   {
-    title: "Change Data Capture Implementation",
-    company_name: "Atlas Computer Technology",
-    icon: debezium,
-    iconBg: "#E6DEDD",
-    date: "2025 ",
-    link: "",
-    code: "",
-    points: [
-      "Designed and implemented Change Data Capture (CDC) using Debezium and Kafka Connect to capture real-time database changes from PostgreSQL.",
-      "Enabled auditing by streaming change events to a dedicated Kafka topic, tracking what changes occurred and when for compliance and monitoring.",
-      "Facilitated database replication by duplicating data to a secondary database, ensuring data consistency for analytics and backup purposes.",
-      "Configured topic-specific triggers to initiate processes like system restarts or custom workflows based on captured events, enhancing automation.",
-      "Optimized CDC pipelines for low-latency streaming, ensuring minimal impact on source database performance while supporting critical use cases.",
-    ],
-  },
+        title: "Large-Scale Production Deployments",
+        company_name: "Atlas Computer Technology",
+        icon: kubernetes,
+        iconBg: "#E6DEDD",
+        date: "2024 - Present",
+        link: "",
+        code: "",
+        points: [
+          "Optimized CI/CD pipelines using Jenkins, converting raw code to Native Images for Docker. Fully automated Kubernetes deployments, significantly reducing human effort and cycle time.",
+          "Ran large-scale platforms in production utilizing Docker and Kubernetes, ensuring zero-downtime deployments.",
+          "Orchestrated the production deployment for the Integrated Justice and Court Management System (IJCMS) as Team Lead.",
+          "Deployed a mission-critical Core Mobile Banking System to Kubernetes clusters.",
+          "Implemented full system observability and distributed tracing using OpenTelemetry to monitor container health and isolate performance bottlenecks.",
+        ],
+      },
+      {
+        title: "Change Data Capture Implementation",
+        company_name: "Atlas Computer Technology",
+        icon: debezium,
+        iconBg: "#E6DEDD",
+        date: "2025 ",
+        link: "",
+        code: "",
+        points: [
+          "Designed and implemented Change Data Capture (CDC) using Debezium and Kafka Connect to capture real-time database changes from PostgreSQL.",
+          "Enabled auditing by streaming change events to a dedicated Kafka topic, tracking what changes occurred and when for compliance and monitoring.",
+          "Facilitated database replication by duplicating data to a secondary database, ensuring data consistency for analytics and backup purposes.",
+          "Configured topic-specific triggers to initiate processes like system restarts or custom workflows based on captured events, enhancing automation.",
+        ],
+      },
   {
     title: "Caching Management for Performance",
     company_name: "Atlas Computer Technology",
@@ -488,11 +550,12 @@ const achievements = [
     link: "",
     code: "",
     points: [
-      "Implemented a Redis-based caching system to optimize resource-intensive operations like complex queries and procedural validations, achieving a 60% reduction in query response times.",
-      "Generated cache keys using SHA-256 hashing of input data to ensure unique and secure identification of cached results, processing 10,000+ unique keys daily with zero collisions.",
-      "Stored sensitive cache keys in Vault, enhancing security and compliance with data protection standards, securing 100% of sensitive cache data.",
+      "Resolved critical database bottleneck by replacing expensive stored procedure validations.",
+      "Implemented a dynamic Groovy script engine leveraging Spring Boot application beans to execute complex validation rules.",
+      "Stored and executed the Groovy scripts directly from the cache to achieve sub-millisecond validation times, falling back to the database only on cache miss.",
+      "Implemented Redisson Distributed Locks to completely eliminate race conditions occurring when concurrent requests accessed the same resource.",
+      "Generated cache keys using SHA-256 hashing of input data to ensure unique and secure identification of cached results, processing 10,000+ unique keys daily.",
       "Reduced database load by caching frequently accessed data, decreasing database CPU usage by 45% in high-traffic scenarios.",
-      "Designed cache invalidation strategies to maintain data consistency, achieving 98% cache hit accuracy for dynamic datasets.",
     ],
   },
   {
@@ -511,7 +574,6 @@ const achievements = [
       "Designed reusable and maintainable rule logic to support evolving business requirements, cutting development time for new rules by 40% and reducing technical debt.",
     ],
   },
-
   {
     title: "Notification Service Implementation",
     company_name: "Atlas Computer Technology",
@@ -529,6 +591,51 @@ const achievements = [
   },
 ];
 
+const realWorldChallenges = [
+  {
+    title: "Race Conditions in Concurrent Transactions",
+    company_name: "Atlas Computer Technology",
+    icon: redis,
+    iconBg: "#E6DEDD",
+    date: "Issue & Resolution",
+    link: "",
+    code: "",
+    points: [
+      "The Challenge: High-throughput identical requests colliding on identical targets caused severe race conditions and data corruption risks.",
+      "The Solution: Engineered robust distributed locking utilizing Redisson.",
+      "The Impact: Completely eradicated race conditions by ensuring only one thread can acquire the lock for a specific resource, ensuring 100% data integrity across concurrent requests.",
+    ],
+  },
+  {
+    title: "Performance Bottlenecks via Database Validations",
+    company_name: "Atlas Computer Technology",
+    icon: postgre,
+    iconBg: "#E6DEDD",
+    date: "Issue & Resolution",
+    link: "",
+    code: "",
+    points: [
+      "The Challenge: Expensive PL/pgSQL database stored procedures for complex business rules were causing massive CPU spikes and slow response times.",
+      "The Solution: Implemented a dynamic Groovy script engine leveraging Spring Boot application beans to execute validation rules natively.",
+      "The Impact: Stored and executed the scripts directly from the cache to achieve sub-millisecond validation times. Fell back to the database only on a cache miss, resulting in massive efficiency gains and a 45% reduction in database CPU usage.",
+    ],
+  },
+  {
+    title: "Inefficient & Error-Prone Deployments",
+    company_name: "Atlas Computer Technology",
+    icon: docker,
+    iconBg: "#E6DEDD",
+    date: "Issue & Resolution",
+    link: "",
+    code: "",
+    points: [
+      "The Challenge: Deployment processes for large-scale platforms were manual, slow, and prone to human error, risking downtime.",
+      "The Solution: Optimized CI/CD pipelines using Jenkins and converted raw code to Native Images for Docker.",
+      "The Impact: Fully automated Kubernetes deployments. Significantly reduced human effort, eliminated deployment errors, and ensured zero-downtime upgrades for mission-critical core banking systems.",
+    ],
+  },
+];
+
 export {
   services,
   technologies,
@@ -537,4 +644,5 @@ export {
   projects,
   tech,
   achievements,
+  realWorldChallenges,
 };

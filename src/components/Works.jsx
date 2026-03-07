@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { Tilt } from "react-tilt";
-import { motion, AnimatePresence } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
   index,
@@ -20,20 +17,8 @@ const ProjectCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      initial="hidden"
-      animate="show"
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <Tilt
-        options={{
-          max: 1,
-          scale: 1,
-          speed: 50,
-        }}
-        className="bg-tertiary p-5 rounded-2xl w-full flex flex-col"
-      >
+    <div className="w-full h-full">
+      <div className="bg-tertiary p-5 rounded-2xl w-full flex flex-col h-full hover:shadow-card transition-shadow duration-300">
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -76,57 +61,42 @@ const ProjectCard = ({
             ))}
           </div>
 
-          <AnimatePresence>
+          <div>
             {isExpanded && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="mt-4"
+              <div
+                className="mt-4 transition-all duration-300"
               >
                 <div className="max-h-[300px] overflow-y-auto pr-2">
                   <p className="text-secondary text-[16px] leading-[26px]">
                     {description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+          </div>
 
-          <motion.button
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-secondary text-white px-4 py-2 rounded-lg text-[16px] mt-4"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 4px 15px rgba(255, 255, 255, 0.2)",
-            }}
-            transition={{ type: "spring", stiffness: 300 }}
+            className="bg-secondary text-white px-4 py-2 rounded-lg text-[16px] mt-4 hover:bg-opacity-80 transition-colors"
           >
             {isExpanded ? "See Less" : "See More"}
-          </motion.button>
+          </button>
         </div>
-      </Tilt>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      variants={textVariant()}
-    >
-      <motion.div variants={textVariant()}>
+    <section>
+      <div>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
+      </div>
 
       <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+        <p
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           The following projects showcase my skills and experience through
@@ -135,21 +105,17 @@ const Works = () => {
           cards to view full details and previews, reflecting my ability to
           solve complex problems and deliver impactful solutions with diverse
           technologies.
-        </motion.p>
+        </p>
       </div>
 
       <div className="mt-20">
         {projects.map((category, categoryIndex) => (
           <div key={`category-${categoryIndex}`} className="mb-12">
-            <motion.h3
-              variants={textVariant()}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
+            <h3
               className="text-white font-bold text-[28px] mb-6"
             >
               {category.category}
-            </motion.h3>
+            </h3>
             <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
               {category.contents.map((project, projectIndex) => (
                 <ProjectCard
@@ -162,7 +128,7 @@ const Works = () => {
           </div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
 

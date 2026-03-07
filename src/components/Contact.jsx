@@ -1,11 +1,8 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 
 const Contact = () => {
   const formRef = useRef();
@@ -86,8 +83,9 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Muse",
           from_email: form.email,
+          reply_to: form.email,
           to_email: "smuse1756@gmail.com",
-          message: form.message,
+          message: `${form.message}\n\n---\nSender Email: ${form.email}`,
         },
         "fXwpkjnGvADlQdhNT"
       )
@@ -108,7 +106,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-          let errorMessage = "Something went wrong. Please try again.";
+          let errorMessage = error.text || "Something went wrong. Please try again.";
           // Check for specific emailjs errors (e.g., invalid email)
           if (error.text && error.text.includes("Invalid email")) {
             errorMessage =
@@ -129,11 +127,10 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row x flex-col-reverse gap-10  overflow-hidden`}
+      className={`xl:mt-12 flex flex-col gap-10 overflow-hidden w-full max-w-4xl mx-auto`}
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+      <div
+        className="flex-[1] bg-black-100 p-8 rounded-2xl border border-tertiary"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -188,24 +185,14 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+      </div>
 
       {modal.isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-0">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div
             className={`p-6 rounded-lg shadow-xl ${
               modal.isSuccess ? "bg-green-600" : "bg-red-600"
-            } text-white max-w-md w-full mx-4`}
+            } text-white max-w-md w-full mx-4 transition-all scale-100 opacity-100`}
           >
             <h3 className="text-xl font-bold mb-4">
               {modal.isSuccess ? "Success!" : "Error"}
@@ -217,7 +204,7 @@ const Contact = () => {
             >
               Close
             </button>
-          </motion.div>
+          </div>
         </div>
       )}
     </div>

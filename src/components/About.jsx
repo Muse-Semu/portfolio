@@ -1,24 +1,15 @@
 import React from "react";
-import {Tilt} from "react-tilt";
-import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+  <div className="xs:w-[250px] w-full">
+    <div
+      className="w-full bg-gradient-to-br from-accent to-tertiary p-[1px] rounded-[20px] shadow-card hover:scale-105 transition-transform duration-300"
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
         <img
@@ -31,32 +22,21 @@ const ServiceCard = ({ index, title, icon }) => (
           {title}
         </h3>
       </div>
-    </motion.div>
-  </Tilt>
+    </div>
+  </div>
 );
 
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+      </div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm a Full Stack Developer with a strong backend focus, I
-        specialize in architecting scalable web applications, excelling in
-        Spring Boot for high-performance backend systems. I design
-        microservices, optimize PostgreSQL databases, and integrate seamlessly
-        with frontend technologies like React.js. With familiarity with DevOps, I
-        am skilled in Kubernetes and Docker for scalable deployments, ensuring
-        resilience in production. Passionate about solving complex backend
-        challenges, I thrive in cross-functional teams, delivering innovative
-        and high-performing digital solutions.
-      </motion.p>
+      <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        I am a dedicated Backend and DevOps Engineer passionate about architecting scalable, resilient, and high-performance systems. I specialize in building robust microservices with Spring Boot, optimizing complex PostgreSQL databases, and implementing event-driven architectures utilizing Kafka and Debezium. With deep expertise in the DevOps lifecycle, I orchestrate zero-downtime production deployments using Docker and Kubernetes, while ensuring system reliability through OpenTelemetry observability and CI/CD pipeline automation via Jenkins. I thrive on solving complex architectural challenges and delivering solutions that drive massive efficiency gains.
+      </p>
 
       <p className="text-white font-bold text-[28px] mt-6">Services</p>
       <div className="mt-20 flex flex-wrap gap-10">
