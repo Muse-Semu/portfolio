@@ -4,7 +4,7 @@ const StarWrapper = (Component, idName) =>
   function HOC() {
     return (
       <section
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+        className={`${styles.padding} max-w-7xl mx-auto`}
       >
         <span className="hash-span" id={idName}>
           &nbsp;

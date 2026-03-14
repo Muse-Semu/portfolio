@@ -16,7 +16,7 @@ import KeyAchievment from "./components/KeyAchievment";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary min-h-screen">
+      <div className="bg-primary min-h-screen">
         <div className="bg-primary bg-cover bg-no-repeat bg-center">
           <Navbar className="navbar" />
           <Hero />

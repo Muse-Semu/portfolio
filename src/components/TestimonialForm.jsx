@@ -164,14 +164,18 @@ const TestimonialForm = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 backdrop-blur-sm">
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999] backdrop-blur-sm p-4"
+      onClick={handleCancel}
+    >
       <div
-        className="bg-primary border border-black-200/10 shadow-md p-8 rounded-2xl w-full max-w-md min-h-[600px] max-h-[80vh] overflow-y-auto"
+        className="bg-primary border border-black-200/10 shadow-md p-6 sm:p-8 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
       >
-        <h3 className={styles.sectionHeadText}>
-          {editingTestimonial ? "Update" : "Add New"}
+        <h3 className="text-text-base text-3xl font-bold mb-4 text-center">
+          {editingTestimonial ? "Update Testimonial" : "Add Testimonial"}
         </h3>
-        <div className="mt-4">
+        <div className="mt-2">
           <div className="flex flex-col gap-4">
             <div>
               <textarea
