@@ -35,7 +35,7 @@ const About = () => {
       </div>
 
       <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        I am a dedicated Backend and DevOps Engineer passionate about architecting scalable, resilient, and high-performance systems. I specialize in building robust microservices with Spring Boot, optimizing complex PostgreSQL databases, and implementing event-driven architectures utilizing Kafka and Debezium. With deep expertise in the DevOps lifecycle, I orchestrate zero-downtime production deployments using Docker and Kubernetes, while ensuring system reliability through OpenTelemetry observability and CI/CD pipeline automation via Jenkins. I thrive on solving complex architectural challenges and delivering solutions that drive massive efficiency gains.
+        I am a dedicated Full Stack and DevOps Engineer passionate about architecting scalable, resilient, and high-performance systems. I specialize in building robust backend microservices with Spring Boot, responsive front-end applications with React and Tailwind, and implementing event-driven architectures utilizing Kafka and Debezium. With deep expertise in the DevOps lifecycle, I orchestrate zero-downtime production deployments using Docker and Kubernetes, while ensuring system reliability through OpenTelemetry observability and CI/CD pipeline automation via Jenkins. I thrive on solving complex architectural challenges and delivering end-to-end solutions that drive massive efficiency gains.
       </p>
 
       <p className="text-text-base font-bold text-[28px] mt-6">Services</p>

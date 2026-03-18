@@ -18,9 +18,9 @@ const Hero = () => {
             Hi, I'm <span className="text-accent">Muse</span>
           </h1>
           <p className={`${styles.heroSubText} text-secondary mt-2 max-w-lg`}>
-            Backend & DevOps Engineer
+            Full Stack & DevOps Engineer
             <br />
-            Building scalable, secure, and resilient infrastructure.
+            Building scalable applications, secure infrastructure, and seamless user experiences.
           </p>
           <ul className="flex items-center gap-4 mt-8">
             <li className="rounded-full h-12 flex items-center justify-center w-12 bg-text-base hover:scale-110 transition-transform cursor-pointer">

@@ -48,7 +48,7 @@ const Navbar = () => {
               Muse Semu
             </span>
             <span className="text-accent text-[13px] font-medium hidden sm:block leading-tight tracking-wide">
-              Backend & DevOps
+              Full Stack & DevOps
             </span>
           </div>
         </Link>
